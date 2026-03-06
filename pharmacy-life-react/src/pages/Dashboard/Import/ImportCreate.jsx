@@ -7,6 +7,8 @@ const ImportCreate = () => {
     const navigate = useNavigate();
     const [suppliers, setSuppliers] = useState([]);
     const [medicines, setPossibleMedicines] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedSupplier, setSelectedSupplier] = useState('');
     const [importDate, setImportDate] = useState(new Date().toISOString().split('T')[0]);
     const [medicinesInImport, setMedicinesInImport] = useState([]);
@@ -16,12 +18,14 @@ const ImportCreate = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [suppData, medData] = await Promise.all([
+                const [suppData, medData, catData] = await Promise.all([
                     importService.getAllSuppliers(),
-                    importService.getAllMedicines()
+                    importService.getAllMedicines(),
+                    importService.getAllCategories()
                 ]);
                 setSuppliers(suppData);
                 setPossibleMedicines(medData);
+                setCategories(catData);
             } catch (err) {
                 setError("Lỗi khi tải dữ liệu: " + err.message);
             }
@@ -61,6 +65,8 @@ const ImportCreate = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        console.log("Submit triggered", { selectedSupplier, importDate, medicinesCount: medicinesInImport.length });
+
         if (!selectedSupplier) {
             alert("⚠️ Vui lòng chọn nhà cung cấp!");
             return;
@@ -72,25 +78,29 @@ const ImportCreate = () => {
 
         setLoading(true);
         const totalPrice = medicinesInImport.reduce((sum, item) => sum + (item.Quantity * item.UnitPrice), 0);
+        const payload = {
+            SupplierId: selectedSupplier,
+            ImportCreateAt: importDate,
+            TotalPrice: totalPrice,
+            Details: medicinesInImport
+        };
+        console.log("Saving payload:", payload);
 
         try {
-            await importService.createImport({
-                SupplierId: parseInt(selectedSupplier),
-                ImportCreateAt: importDate,
-                TotalPrice: totalPrice,
-                Details: medicinesInImport
-            });
+            const result = await importService.createImport(payload);
+            console.log("Save successful:", result);
             alert("✅ Lưu phiếu nhập thành công!");
             navigate('/dashboard/import/list');
         } catch (err) {
-            alert("❌ Lỗi: " + err.message);
+            console.error("Submit error:", err);
+            alert("❌ Lỗi: " + (err.response?.data?.message || err.message));
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <div className="container-fluid py-4 px-lg-5">
+        <div className="container-fluid py-4 px-lg-5 bg-light min-vh-100">
             <nav aria-label="breadcrumb" className="mb-4">
                 <ol className="breadcrumb">
                     <li className="breadcrumb-item"><Link to="/dashboard" className="text-decoration-none text-muted">Dashboard</Link></li>
@@ -102,21 +112,20 @@ const ImportCreate = () => {
             <div className="row justify-content-center">
                 <div className="col-12 col-xl-11">
                     <form onSubmit={handleSubmit}>
-                        <div className="card shadow-sm border-0 rounded-4 overflow-hidden mb-4">
+                        <div className="card shadow border-0 rounded-4 overflow-hidden mb-4">
                             <div className="card-header bg-primary text-white py-3 d-flex justify-content-between align-items-center border-0 px-4">
-                                <h4 className="mb-0 fw-bold"><i className="bi bi-file-earmark-plus me-2"></i>Tạo Phiếu Nhập</h4>
+                                <h4 className="mb-0 fw-bold"><i className="bi bi-file-earmark-plus-fill me-2"></i>Tạo Phiếu Nhập</h4>
                                 <Link to="/dashboard/import/list" className="btn btn-outline-light btn-sm px-3 rounded-pill border-white border-2">
-                                    <i className="bi bi-x-lg me-1 small"></i> Hủy bỏ
+                                    <i className="bi bi-arrow-left me-1 small"></i> Trở về danh sách
                                 </Link>
                             </div>
-                            <div className="card-body p-4">
-                                <div className="row g-4 mb-4">
+                            <div className="card-body p-lg-5">
+                                <div className="row g-4 mb-5">
                                     <div className="col-md-6">
-                                        <label className="form-label fw-bold text-secondary small text-uppercase">Nhà cung cấp:</label>
-                                        <div className="input-group">
-                                            <span className="input-group-text bg-white border-primary-subtle text-primary"><i className="bi bi-truck"></i></span>
+                                        <div className="form-floating">
                                             <select
-                                                className="form-select border-primary-subtle shadow-none py-2"
+                                                className="form-select border-primary-subtle shadow-none"
+                                                id="supplierSelect"
                                                 value={selectedSupplier}
                                                 onChange={(e) => setSelectedSupplier(e.target.value)}
                                                 required
@@ -126,81 +135,116 @@ const ImportCreate = () => {
                                                     <option key={s.SupplierId} value={s.SupplierId}>{s.SupplierName}</option>
                                                 ))}
                                             </select>
+                                            <label htmlFor="supplierSelect" className="fw-bold text-primary">NHÀ CUNG CẤP</label>
                                         </div>
                                     </div>
                                     <div className="col-md-6">
-                                        <label className="form-label fw-bold text-secondary small text-uppercase">Ngày nhập:</label>
-                                        <div className="input-group">
-                                            <span className="input-group-text bg-white border-primary-subtle text-primary"><i className="bi bi-calendar-check"></i></span>
+                                        <div className="form-floating">
                                             <input
                                                 type="date"
-                                                className="form-control border-primary-subtle shadow-none py-2"
+                                                className="form-control border-primary-subtle shadow-none"
+                                                id="importDate"
                                                 value={importDate}
                                                 onChange={(e) => setImportDate(e.target.value)}
                                                 required
                                             />
+                                            <label htmlFor="importDate" className="fw-bold text-primary">NGÀY NHẬP HÀNG</label>
                                         </div>
                                     </div>
                                 </div>
 
-                                <hr className="my-4 opacity-10" />
-
-                                <div className="bg-light p-4 rounded-4 mb-4 border border-info-subtle border-start-4 border-start-info shadow-sm">
-                                    <div className="row g-3 align-items-center">
-                                        <div className="col-md-6 col-lg-7">
-                                            <label className="form-label mb-2 fw-semibold text-dark">
-                                                <i className="bi bi-search me-2 text-info"></i>Tìm kiếm & thêm thuốc:
+                                <div className="p-4 rounded-4 mb-4" style={{ backgroundColor: '#f0f7ff', border: '1px solid #cce3ff' }}>
+                                    <div className="row g-3 align-items-end">
+                                        <div className="col-md-4">
+                                            <label className="form-label mb-2 fw-bold text-dark-emphasis small uppercase">
+                                                <i className="bi bi-collection-fill me-2 text-primary"></i>1. DANH MỤC THUỐC
                                             </label>
                                             <select
-                                                className="form-select border-info shadow-none py-2"
-                                                onChange={handleAddMedicine}
+                                                className="form-select border-0 shadow-sm py-2 rounded-3"
+                                                value={selectedCategory}
+                                                onChange={(e) => setSelectedCategory(e.target.value)}
                                             >
-                                                <option value="">-- Chọn Thuốc từ danh mục --</option>
+                                                <option value="">Tất cả danh mục</option>
+                                                {categories.map(cat => (
+                                                    <option key={cat.CategoryId} value={cat.CategoryId}>{cat.CategoryName}</option>
+                                                ))}
+                                            </select>
+                                        </div>
+                                        <div className="col-md-8">
+                                            <label className="form-label mb-2 fw-bold text-dark-emphasis small uppercase">
+                                                <i className="bi bi-search me-2 text-primary"></i>2. CHỌN THUỐC CẦN NHẬP
+                                            </label>
+                                            <select
+                                                className="form-select border-0 shadow-sm py-2 rounded-3"
+                                                onChange={handleAddMedicine}
+                                                value=""
+                                            >
+                                                <option value="">{selectedCategory ? "-- Chọn Thuốc trong danh mục này --" : "-- Chọn Thuốc (Hoặc chọn danh mục để lọc) --"}</option>
                                                 {medicines
+                                                    .filter(m => !selectedCategory || m.CategoryId === parseInt(selectedCategory))
                                                     .filter(m => !medicinesInImport.some(mi => mi.MedicineId === m.MedicineId))
                                                     .map(m => (
-                                                        <option key={m.MedicineId} value={m.MedicineId}>{m.MedicineName} (Đơn giá MT: {m.OriginalPrice?.toLocaleString()} VNĐ)</option>
+                                                        <option key={m.MedicineId} value={m.MedicineId}>
+                                                            {m.MedicineName} - Giá nhập: {m.OriginalPrice?.toLocaleString() || 0} VNĐ ({m.Unit})
+                                                        </option>
                                                     ))
                                                 }
                                             </select>
                                         </div>
-                                        <div className="col-md-6 col-lg-5 ps-md-4 mt-md-4">
-                                            <div className="d-flex align-items-center h-100 mt-2">
-                                                <i className="bi bi-lightbulb-fill text-warning me-2 fs-4"></i>
-                                                <span className="text-muted small">Mẹo: Chọn thuốc từ danh sách để tự động điền giá gốc.</span>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
-                                <div className="mb-4 shadow-sm bg-white rounded-3">
-                                    <MedicineTable
-                                        medicines={medicinesInImport}
-                                        onRemoveMedicine={removeMedicine}
-                                        onUpdateMedicine={updateMedicine}
-                                    />
+                                <div className="mb-4">
+                                    <div className="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 className="mb-0 fw-bold border-start border-4 border-primary ps-3">Danh sách thuốc đã chọn</h5>
+                                        <span className="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2">
+                                            {medicinesInImport.length} loại sản phẩm
+                                        </span>
+                                    </div>
+                                    <div className="shadow-sm bg-white rounded-4 overflow-hidden border">
+                                        <MedicineTable
+                                            medicines={medicinesInImport}
+                                            onRemoveMedicine={removeMedicine}
+                                            onUpdateMedicine={updateMedicine}
+                                        />
+                                    </div>
                                 </div>
 
-                                <div className="d-flex justify-content-end gap-3 mt-5">
+                                {medicinesInImport.length > 0 && (
+                                    <div className="row justify-content-end mb-5">
+                                        <div className="col-md-5 col-lg-4">
+                                            <div className="card bg-primary text-white border-0 rounded-4 shadow-sm p-3">
+                                                <div className="d-flex justify-content-between align-items-center">
+                                                    <span className="opacity-75 fw-semibold">Tổng tiền thanh toán:</span>
+                                                    <h3 className="mb-0 fw-bold">
+                                                        {medicinesInImport.reduce((sum, item) => sum + (item.Quantity * item.UnitPrice), 0).toLocaleString()} <small className="fs-6">VNĐ</small>
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+
+                                <div className="d-flex justify-content-end gap-3 pt-4 border-top">
                                     <button
                                         type="button"
-                                        className="btn btn-light px-4 py-2 text-muted fw-semibold rounded-pill border shadow-none"
+                                        className="btn btn-light px-4 py-2 text-muted fw-bold rounded-pill border"
                                         onClick={() => navigate('/dashboard/import/list')}
                                     >
-                                        Hủy thao tác
+                                        Hủy bỏ
                                     </button>
                                     <button
                                         type="submit"
-                                        className={`btn btn-primary px-5 py-2 fw-bold rounded-pill shadow ${loading ? 'disabled opacity-75' : 'hover-scale'}`}
+                                        className={`btn btn-primary px-5 py-2 fw-bold rounded-pill shadow-lg ${loading ? 'disabled opacity-75' : ''}`}
                                         disabled={loading}
-                                        style={{ minWidth: '200px' }}
+                                        style={{ minWidth: '220px', transition: 'all 0.3s ease' }}
                                     >
                                         {loading ? (
                                             <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
                                         ) : (
-                                            <i className="bi bi-save2 me-2"></i>
+                                            <i className="bi bi-check2-circle me-2"></i>
                                         )}
-                                        {loading ? 'Đang xử lý...' : 'Lưu Phiếu Nhập'}
+                                        {loading ? 'Đang lưu...' : 'Lưu & Hoàn Tất'}
                                     </button>
                                 </div>
                             </div>
@@ -208,6 +252,19 @@ const ImportCreate = () => {
                     </form>
                 </div>
             </div>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .form-floating > .form-control:focus ~ label,
+                .form-floating > .form-control:not(:placeholder-shown) ~ label,
+                .form-floating > .form-select ~ label {
+                    opacity: .85;
+                    transform: scale(.85) translateY(-.5rem) translateX(.15rem);
+                }
+                .hover-scale:hover {
+                    transform: scale(1.02);
+                }
+            ` }} />
         </div>
     );
 };

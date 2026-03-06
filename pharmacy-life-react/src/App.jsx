@@ -22,6 +22,12 @@ import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import DashboardHome from "./pages/Admin/DashboardHome";
 import ImportList from './pages/Dashboard/Import/ImportList';
 import ImportCreate from './pages/Dashboard/Import/ImportCreate';
+import ImportDetail from './pages/Dashboard/Import/ImportDetail';
+import ImportEdit from './pages/Dashboard/Import/ImportEdit';
+import UserProfile from './pages/Profile/UserProfile';
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import HomePage from "./pages/Dashboard/HomePage";
 
 function App() {
   return (
@@ -53,8 +59,17 @@ function App() {
               <Route path="create" element={<ImportCreate />} />
             </Route>
 
-            {/* Thêm các trang quản lý thuốc, đơn hàng... tại đây */}
-          </Route>
+        <main className="flex-grow-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dashboard" element={<HomePage />} />
+            <Route path="/dashboard/import/list" element={<ImportList />} />
+            <Route path="/dashboard/import/create" element={<ImportCreate />} />
+            <Route path="/dashboard/import/detail/:id" element={<ImportDetail />} />
+            <Route path="/dashboard/import/edit/:id" element={<ImportEdit />} />
+            <Route path="/profile" element={<UserProfile />} />
+          </Routes>
+        </main>
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />

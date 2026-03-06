@@ -12,7 +12,13 @@ const ImportList = () => {
         const fetchImports = async () => {
             try {
                 const data = await importService.getAllImports();
-                setImports(data);
+                // Sort by ImportId or date descending so newest is at top
+                const sortedData = [...data].sort((a, b) => {
+                    const idA = parseInt(a.ImportId) || 0;
+                    const idB = parseInt(b.ImportId) || 0;
+                    return idB - idA;
+                });
+                setImports(sortedData);
                 setLoading(false);
             } catch (err) {
                 setError("Failed to fetch imports: " + err.message);
@@ -79,8 +85,8 @@ const ImportList = () => {
                             <tbody className="border-top-0">
                                 {imports.length > 0 ? (
                                     imports.map((item) => (
-                                        <tr key={item.id || item.ImportId}>
-                                            <td className="ps-4 py-3 fw-bold text-secondary">#{item.id || item.ImportId}</td>
+                                        <tr key={item.ImportId || item.id}>
+                                            <td className="ps-4 py-3 fw-bold text-secondary">#{item.ImportId || item.id}</td>
                                             <td className="py-3">
                                                 <div className="d-flex align-items-center">
                                                     <div className="rounded-circle bg-primary-subtle p-2 me-3 text-primary">
@@ -102,8 +108,8 @@ const ImportList = () => {
                                             </td>
                                             <td className="py-3">
                                                 <span className={`badge rounded-pill px-3 py-2 ${item.Status === 'Hoàn thành'
-                                                        ? 'bg-success-subtle text-success border border-success'
-                                                        : 'bg-warning-subtle text-warning-emphasis border border-warning'
+                                                    ? 'bg-success-subtle text-success border border-success'
+                                                    : 'bg-warning-subtle text-warning-emphasis border border-warning'
                                                     }`}>
                                                     <i className={`bi bi-${item.Status === 'Hoàn thành' ? 'check-circle' : 'hourglass-split'} me-1`}></i>
                                                     {item.Status || 'N/A'}
@@ -111,13 +117,20 @@ const ImportList = () => {
                                             </td>
                                             <td className="text-center py-3 pe-4">
                                                 <div className="d-flex justify-content-center gap-2">
-                                                    <button
+                                                    <Link
+                                                        to={`/dashboard/import/detail/${item.id}`}
                                                         className="btn btn-sm btn-outline-info rounded-3"
                                                         title="Xem chi tiết"
-                                                        onClick={() => alert("Chi tiết đang được cập nhật!")}
                                                     >
                                                         <i className="bi bi-eye"></i>
-                                                    </button>
+                                                    </Link>
+                                                    <Link
+                                                        to={`/dashboard/import/edit/${item.id}`}
+                                                        className="btn btn-sm btn-outline-warning rounded-3"
+                                                        title="Chỉnh sửa"
+                                                    >
+                                                        <i className="bi bi-pencil"></i>
+                                                    </Link>
                                                     <button
                                                         className="btn btn-sm btn-outline-danger rounded-3"
                                                         title="Xóa phiếu"
