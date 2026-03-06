@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ImportList from './pages/Dashboard/Import/ImportList';
 import ImportCreate from './pages/Dashboard/Import/ImportCreate';
-import React, { useState } from "react";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import HomePage from "./pages/Dashboard/HomePage";
@@ -32,10 +31,10 @@ function App() {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav ms-lg-4 gap-2">
                 <li className="nav-item">
-                  <Link to="/dashboard" className="nav-link px-3 rounded-pill">Trang chủ</Link>
+                  <Link to="/dashboard" className="nav-link px-3 rounded-pill active">Trang chủ</Link>
                 </li>
                 <li className="nav-item">
-                  <Link to="/dashboard/import/list" className="nav-link px-3 rounded-pill active bg-primary-subtle text-primary border-0">
+                  <Link to="/dashboard/import/list" className="nav-link px-3 rounded-pill bg-primary-subtle text-primary border-0">
                     <i className="bi bi-box-seam me-2"></i>Nhập hàng
                   </Link>
                 </li>
@@ -54,8 +53,8 @@ function App() {
 
         <main className="flex-grow-1">
           <Routes>
-            <Route path="/" element={<Navigate to="/dashboard/import/list" />} />
-            <Route path="/dashboard" element={<Navigate to="/dashboard/import/list" />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/dashboard" element={<HomePage />} />
             <Route path="/dashboard/import/list" element={<ImportList />} />
             <Route path="/dashboard/import/create" element={<ImportCreate />} />
           </Routes>
@@ -66,19 +65,6 @@ function App() {
         </footer>
       </div>
     </Router>
-  );
-}
-
-export default App;
-
-
-    <div className="min-h-screen flex flex-col">
-      <Navbar cartCount={cartCount} />
-      <div className="flex-1">
-        <HomePage />
-      </div>
-      <Footer />
-    </div>
   );
 }
 
