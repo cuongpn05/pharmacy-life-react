@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getMedicines, getCategories } from "../../services/pharmacyService";
+import { useCart } from "../../context/CartContext";
 
 const API_BASE = "http://localhost:3002";
 
@@ -34,6 +35,7 @@ const ProductSkeleton = () => (
 );
 
 const ProductCard = ({ medicine, categoryName }) => {
+    const { addToCart } = useCart();
     const [wishlisted, setWishlisted] = useState(false);
     const inStock = medicine.RemainingQuantity > 0;
     const hasDiscount = medicine.OriginalPrice && medicine.OriginalPrice > medicine.SellingPrice;
@@ -47,6 +49,19 @@ const ProductCard = ({ medicine, categoryName }) => {
             ? medicine.ImageUrl
             : `${process.env.PUBLIC_URL}${medicine.ImageUrl}`
         : null;
+
+    // Hàm xử lý thêm vào giỏ hàng
+    const handleAddToCart = () => {
+        const product = {
+            id: medicine.MedicineId,
+            name: medicine.MedicineName,
+            price: medicine.SellingPrice,
+            image: medicine.ImageUrl,
+            unit: medicine.Unit,
+            category: categoryName
+        };
+        addToCart(product);
+    };
 
     return (
         <div id={`product-card-${medicine.MedicineId}`} className="card overflow-hidden group flex flex-col">
@@ -153,6 +168,7 @@ const ProductCard = ({ medicine, categoryName }) => {
                 {/* Add to Cart */}
                 <button
                     id={`add-to-cart-btn-${medicine.MedicineId}`}
+                    onClick={handleAddToCart}
                     disabled={!inStock}
                     className={`w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 flex items-center justify-center gap-2
             ${inStock
