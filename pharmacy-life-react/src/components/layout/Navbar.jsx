@@ -1,157 +1,213 @@
 import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+    Search,
+    ShoppingCart,
+    Bell,
+    User,
+    Menu,
+    X,
+    Pill,
+    ChevronDown
+} from "lucide-react";
+import { useCart } from "../../context/CartContext";
 
-const Navbar = ({ cartCount = 0 }) => {
-    const [scrolled, setScrolled] = useState(false);
-    const [mobileOpen, setMobileOpen] = useState(false);
+// ─── Sub-Components ─────────────────────────────────────────────────────────
+
+const Logo = () => (
+    <Link to="/" className="flex items-center gap-2 group shrink-0">
+        <div className="w-10 h-10 bg-gradient-to-tr from-primary-600 to-primary-400 rounded-xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform duration-300">
+            <Pill className="w-6 h-6 text-white" />
+        </div>
+        <div className="flex flex-col leading-none">
+            <span className="text-xl font-black tracking-tight text-slate-800">
+                PHARMACY<span className="text-primary-600">LIFE</span>
+            </span>
+            <span className="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase">Trusted Health</span>
+        </div>
+    </Link>
+);
+
+const NavLink = ({ to, label }) => {
+    const location = useLocation();
+    const isActive = location.pathname === to;
+
+    return (
+        <Link
+            to={to}
+            className={`text-sm font-bold transition-all duration-200 relative group py-2 px-1 ${isActive ? "text-primary-600" : "text-slate-600 hover:text-primary-500"
+                }`}
+        >
+            {label}
+            <span className={`absolute bottom-0 left-0 h-1 bg-primary-500 rounded-full transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                }`} />
+        </Link>
+    );
+};
+
+const SearchBar = ({ value, onChange }) => (
+    <div className="relative group w-full max-w-sm">
+        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <Search className="h-4 w-4 text-slate-400 group-focus-within:text-primary-500 transition-colors" />
+        </div>
+        <input
+            type="text"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            placeholder="Tìm kiếm thuốc, thực phẩm chức năng..."
+            className="block w-full pl-11 pr-4 py-2.5 bg-slate-100/50 border border-transparent focus:bg-white focus:ring-4 focus:ring-primary-100 focus:border-primary-400 rounded-2xl text-sm transition-all duration-300 placeholder:text-slate-400 placeholder:font-medium"
+        />
+        <div className="absolute inset-y-0 right-0 pr-3 flex items-center">
+            <span className="hidden lg:block text-[10px] font-bold text-slate-300 bg-white px-1.5 py-0.5 rounded border border-slate-100">
+                ⌘K
+            </span>
+        </div>
+    </div>
+);
+
+const ActionIcons = ({ cartCount, toggleMobile }) => (
+    <div className="flex items-center gap-1 sm:gap-3">
+        {/* Notifications */}
+        <button className="relative p-2.5 rounded-2xl text-slate-600 hover:bg-slate-100 hover:text-primary-600 transition-all duration-200 group">
+            <Bell className="w-5 h-5" />
+            <span className="absolute top-2.5 right-2.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white group-hover:scale-125 transition-transform" />
+        </button>
+
+        {/* Cart */}
+        <Link
+            to="/cart"
+            className="relative p-2.5 rounded-2xl bg-primary-50 text-primary-600 hover:bg-primary-100 transition-all duration-200 group"
+        >
+            <ShoppingCart className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+            {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[20px] h-5 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-1 border-2 border-white shadow-sm">
+                    {cartCount}
+                </span>
+            )}
+        </Link>
+
+        {/* Login Button */}
+        <button className="hidden sm:flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-2xl font-bold text-sm hover:bg-slate-800 transition-all duration-300 shadow-md hover:shadow-lg active:scale-95">
+            <User className="w-4 h-4" />
+            Đăng nhập
+        </button>
+
+        {/* Mobile Toggle */}
+        <button
+            onClick={toggleMobile}
+            className="md:hidden p-2.5 rounded-2xl bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all"
+        >
+            <Menu className="w-6 h-6" />
+        </button>
+    </div>
+);
+
+// ─── Main Component ────────────────────────────────────────────────────────
+
+const Navbar = () => {
+    const { getTotalQuantity } = useCart();
+    const cartCount = getTotalQuantity();
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState("");
 
     useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 20);
-        window.addEventListener("scroll", onScroll);
-        return () => window.removeEventListener("scroll", onScroll);
+        const handleScroll = () => setIsScrolled(window.scrollY > 20);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const navLinks = [
-        { label: "Home", href: "#" },
-        { label: "Products", href: "#products" },
-        { label: "Categories", href: "#categories" },
-        { label: "About", href: "#about" },
-        { label: "Contact", href: "#contact" },
+        { label: "Trang chủ", to: "/" },
+        { label: "Sản phẩm", to: "/products" },
+        { label: "Danh mục", to: "/categories" },
+        { label: "Về chúng tôi", to: "/about" },
     ];
 
     return (
-        <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-white/95 backdrop-blur-md shadow-md py-3"
-                    : "bg-white/80 backdrop-blur-sm py-4"
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between gap-4">
-                    {/* Logo */}
-                    <a href="#" className="flex items-center gap-2 shrink-0">
-                        <div className="w-9 h-9 bg-primary-500 rounded-xl flex items-center justify-center shadow-md">
-                            <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
-                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                            </svg>
+        <>
+            <nav
+                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${isScrolled
+                        ? "py-3 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-lg shadow-slate-200/50"
+                        : "py-5 bg-transparent"
+                    }`}
+            >
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex items-center justify-between gap-8">
+                        {/* Left Area: Logo + Nav */}
+                        <div className="flex items-center gap-10">
+                            <Logo />
+                            <div className="hidden lg:flex items-center gap-8">
+                                {navLinks.map((link) => (
+                                    <NavLink key={link.label} {...link} />
+                                ))}
+                            </div>
                         </div>
-                        <span className="text-xl font-bold">
-                            <span className="text-primary-500">Pharmacy</span>
-                            <span className="text-slate-700">Life</span>
-                        </span>
-                    </a>
 
-                    {/* Desktop Nav Links */}
-                    <div className="hidden md:flex items-center gap-6">
+                        {/* Center Area: Search (Desktop) */}
+                        <div className="hidden md:flex flex-1 justify-center px-4">
+                            <SearchBar value={searchQuery} onChange={setSearchQuery} />
+                        </div>
+
+                        {/* Right Area: Icons + Profile */}
+                        <ActionIcons cartCount={cartCount} toggleMobile={() => setIsMobileMenuOpen(true)} />
+                    </div>
+                </div>
+            </nav>
+
+            {/* Mobile Menu Overlay */}
+            <div
+                className={`fixed inset-0 z-[110] bg-slate-900/60 backdrop-blur-sm transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                    }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+            />
+
+            <div
+                className={`fixed top-0 right-0 bottom-0 z-[120] w-[280px] bg-white shadow-2xl transition-transform duration-500 ease-out transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                    }`}
+            >
+                <div className="p-6 flex flex-col h-full">
+                    <div className="flex items-center justify-between mb-8">
+                        <Logo />
+                        <button
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="p-2 rounded-xl bg-slate-50 text-slate-400"
+                        >
+                            <X className="w-6 h-6" />
+                        </button>
+                    </div>
+
+                    <div className="mb-8 md:hidden">
+                        <SearchBar value={searchQuery} onChange={setSearchQuery} />
+                    </div>
+
+                    <div className="space-y-2 flex-1">
+                        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 ml-1">Điều hướng</p>
                         {navLinks.map((link) => (
-                            <a
+                            <Link
                                 key={link.label}
-                                href={link.href}
-                                className="text-sm font-medium text-slate-600 hover:text-primary-500 transition-colors duration-200 relative group"
+                                to={link.to}
+                                onClick={() => setIsMobileMenuOpen(false)}
+                                className="flex items-center justify-between p-4 rounded-2xl bg-slate-50 hover:bg-primary-50 hover:text-primary-600 transition-all font-bold group"
                             >
                                 {link.label}
-                                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-primary-500 rounded group-hover:w-full transition-all duration-300" />
-                            </a>
+                                <ChevronDown className="w-4 h-4 -rotate-90 opacity-0 group-hover:opacity-100 transition-all" />
+                            </Link>
                         ))}
                     </div>
 
-                    {/* Search Bar */}
-                    <div className="hidden sm:flex flex-1 max-w-xs lg:max-w-sm relative">
-                        <input
-                            type="text"
-                            placeholder="Search medicines..."
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full pl-10 pr-4 py-2 text-sm rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-transparent transition-all duration-200"
-                        />
-                        <svg
-                            className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
-                            fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
-
-                    {/* Right Icons */}
-                    <div className="flex items-center gap-2">
-                        {/* Cart */}
-                        <button
-                            id="navbar-cart-btn"
-                            className="relative p-2.5 rounded-xl hover:bg-primary-50 text-slate-600 hover:text-primary-500 transition-all duration-200 cursor-pointer"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                            {cartCount > 0 && (
-                                <span className="absolute -top-1 -right-1 w-4.5 h-4.5 min-w-[18px] bg-primary-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center px-0.5">
-                                    {cartCount}
-                                </span>
-                            )}
-                        </button>
-
-                        {/* Account */}
-                        <button
-                            id="navbar-account-btn"
-                            className="hidden sm:flex p-2.5 rounded-xl hover:bg-primary-50 text-slate-600 hover:text-primary-500 transition-all duration-200 cursor-pointer"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                        </button>
-
-                        {/* Mobile hamburger */}
-                        <button
-                            id="navbar-mobile-toggle"
-                            onClick={() => setMobileOpen(!mobileOpen)}
-                            className="md:hidden p-2.5 rounded-xl hover:bg-slate-100 text-slate-600 transition-all duration-200 cursor-pointer"
-                        >
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                {mobileOpen ? (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                ) : (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                )}
-                            </svg>
+                    <div className="mt-auto pt-6 border-t border-slate-100">
+                        <button className="w-full bg-slate-900 text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3">
+                            <User className="w-5 h-5" />
+                            Đăng nhập / Đăng ký
                         </button>
                     </div>
                 </div>
-
-                {/* Mobile Menu */}
-                {mobileOpen && (
-                    <div className="md:hidden mt-3 pb-3 border-t border-slate-100 animate-fade-up">
-                        <div className="pt-3 flex flex-col gap-1">
-                            {/* Mobile Search */}
-                            <div className="relative mb-3 sm:hidden">
-                                <input
-                                    type="text"
-                                    placeholder="Search medicines..."
-                                    className="w-full pl-10 pr-4 py-2.5 text-sm rounded-xl border border-slate-200 bg-slate-50 focus:outline-none focus:ring-2 focus:ring-primary-300"
-                                />
-                                <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                            </div>
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.label}
-                                    href={link.href}
-                                    onClick={() => setMobileOpen(false)}
-                                    className="px-3 py-2.5 text-sm font-medium text-slate-600 hover:text-primary-500 hover:bg-primary-50 rounded-xl transition-all duration-200"
-                                >
-                                    {link.label}
-                                </a>
-                            ))}
-                        </div>
-                    </div>
-                )}
             </div>
-        </nav>
+
+            {/* Spacer to prevent content jump since nav is fixed */}
+            <div className="h-[80px] md:h-[90px]" />
+        </>
     );
 };
 
