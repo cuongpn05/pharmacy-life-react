@@ -28,3 +28,24 @@ export const getMedicineById = async (id) => {
   if (!res.ok) throw new Error("Failed to fetch medicine");
   return res.json();
 };
+
+// ─── Customer ─────────────────────────────────────────────────────────────────
+
+export const getCustomerById = async (id) => {
+  const res = await fetch(`${API_BASE_URL}/Customer?CustomerId=${id}`);
+  if (!res.ok) throw new Error(`Failed to fetch customer with ID ${id}`);
+  const data = await res.json();
+  return data.length > 0 ? data[0] : null;
+};
+
+export const updateCustomer = async (id, data) => {
+  const res = await fetch(`${API_BASE_URL}/Customer/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  if (!res.ok) throw new Error(`Failed to update customer with ID ${id}`);
+  return res.json();
+};

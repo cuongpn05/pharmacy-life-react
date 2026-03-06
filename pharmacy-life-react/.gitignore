@@ -2,9 +2,11 @@
 
 .agent/
 # dependencies
+
 /node_modules
 /.pnp
 .pnp.js
+.github/
 
 # testing
 /coverage
