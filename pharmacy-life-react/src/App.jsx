@@ -22,12 +22,9 @@ import CheckoutPage from "./pages/Checkout/CheckoutPage";
 import DashboardHome from "./pages/Admin/DashboardHome";
 import ImportList from './pages/Dashboard/Import/ImportList';
 import ImportCreate from './pages/Dashboard/Import/ImportCreate';
-import UserProfile from './pages/Profile/UserProfile';
-import Navbar from "./components/layout/Navbar";
-import Footer from "./components/layout/Footer";
-import HomePage from "./pages/Dashboard/HomePage";
-import CategoryList from './pages/Dashboard/CategoryList';
-import CategoryCreate from './pages/Dashboard/CategoryCreate';
+import ImportDetail from './pages/Dashboard/Import/ImportDetail';
+import ImportEdit from './pages/Dashboard/Import/ImportEdit';
+
 function App() {
   return (
     <CartProvider>
@@ -50,18 +47,15 @@ function App() {
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Navigate to="/admin/dashboard" replace />} />
             <Route path="dashboard" element={<DashboardHome />} />
-
-        <main className="flex-grow-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/dashboard" element={<HomePage />} />
-            <Route path="/dashboard/import/list" element={<ImportList />} />
-            <Route path="/dashboard/import/create" element={<ImportCreate />} />
-            <Route path="/profile" element={<UserProfile />} />
-            <Route path="/category-list" element={<CategoryList />} />
-            <Route path="/category-create" element={<CategoryCreate />} />
-          </Routes>
-        </main>
+            
+            {/* Nhập hàng */}
+            <Route path="import">
+              <Route path="list" element={<ImportList />} />
+              <Route path="create" element={<ImportCreate />} />
+              <Route path="detail/:id" element={<ImportDetail />} />
+              <Route path="edit/:id" element={<ImportEdit />} />
+            </Route>
+          </Route>
 
           {/* Fallback */}
           <Route path="*" element={<Navigate to="/" replace />} />
