@@ -8,86 +8,93 @@ const MedicineTable = ({ medicines, onRemoveMedicine, onUpdateMedicine }) => {
     const totalAmount = medicines.reduce((sum, item) => sum + calculateSubTotal(item.Quantity, item.UnitPrice), 0);
 
     return (
-        <div className="table-responsive rounded-3 border">
-            <table className="table table-hover align-middle mb-0">
-                <thead className="table-light">
+        <div className="table-responsive">
+            <table className="table table-borderless align-middle mb-0">
+                <thead className="bg-light text-uppercase tracking-wider">
                     <tr>
-                        <th className="ps-3 border-0 py-3">#</th>
-                        <th className="border-0 py-3">Tên thuốc</th>
-                        <th className="border-0 py-3">Đơn vị</th>
-                        <th className="border-0 py-3" style={{ width: '120px' }}>Số lượng</th>
-                        <th className="border-0 py-3" style={{ width: '180px' }}>Giá nhập (VNĐ)</th>
-                        <th className="border-0 py-3">Thành tiền</th>
-                        <th className="text-center pe-3 border-0 py-3" style={{ width: '80px' }}></th>
+                        <th className="ps-4 border-0 py-3 text-secondary small fw-bold">#</th>
+                        <th className="border-0 py-3 text-secondary small fw-bold">Thông tin thuốc</th>
+                        <th className="border-0 py-3 text-secondary small fw-bold" style={{ width: '120px' }}>Số lượng</th>
+                        <th className="border-0 py-3 text-secondary small fw-bold" style={{ width: '200px' }}>Giá nhập (VNĐ)</th>
+                        <th className="border-0 py-3 text-secondary small fw-bold">Thành tiền</th>
+                        <th className="text-center pe-4 border-0 py-3" style={{ width: '80px' }}></th>
                     </tr>
                 </thead>
-                <tbody className="border-top-0">
+                <tbody>
                     {medicines.length > 0 ? (
                         medicines.map((item, index) => (
-                            <tr key={index}>
-                                <td className="ps-3 fw-bold text-muted">{index + 1}</td>
+                            <tr key={index} className="border-bottom hover-bg-light transition-all">
+                                <td className="ps-4 fw-bold text-muted">{index + 1}</td>
                                 <td>
-                                    <div className="fw-semibold text-dark">{item.MedicineName}</div>
-                                    <div className="text-muted small">Mã: {item.MedicineId}</div>
+                                    <div className="fw-bold text-dark">{item.MedicineName}</div>
+                                    <div className="d-flex align-items-center mt-1">
+                                        <span className="badge bg-info-subtle text-info me-2 fw-medium border border-info-subtle">
+                                            {item.Unit}
+                                        </span>
+                                        <small className="text-muted">Mã: {item.MedicineId}</small>
+                                    </div>
                                 </td>
                                 <td>
-                                    <span className="badge bg-light text-dark border">{item.Unit}</span>
+                                    <div className="input-group input-group-sm">
+                                        <input
+                                            type="number"
+                                            className="form-control border-light shadow-none text-center fw-bold"
+                                            value={item.Quantity}
+                                            onChange={(e) => onUpdateMedicine(index, 'Quantity', parseInt(e.target.value) || 0)}
+                                            min="1"
+                                            style={{ backgroundColor: '#fcfdfe', borderRadius: '8px' }}
+                                        />
+                                    </div>
                                 </td>
                                 <td>
-                                    <input
-                                        type="number"
-                                        className="form-control form-control-sm border-info-subtle shadow-none"
-                                        value={item.Quantity}
-                                        onChange={(e) => onUpdateMedicine(index, 'Quantity', parseInt(e.target.value) || 0)}
-                                        min="1"
-                                        style={{ backgroundColor: '#f8fcff' }}
-                                    />
+                                    <div className="input-group input-group-sm">
+                                        <input
+                                            type="number"
+                                            className="form-control border-light shadow-none text-end fw-bold text-primary"
+                                            value={item.UnitPrice}
+                                            onChange={(e) => onUpdateMedicine(index, 'UnitPrice', parseFloat(e.target.value) || 0)}
+                                            min="0"
+                                            style={{ backgroundColor: '#fcfdfe', borderRadius: '8px' }}
+                                        />
+                                        <span className="input-group-text bg-transparent border-0 text-muted small">đ</span>
+                                    </div>
                                 </td>
-                                <td>
-                                    <input
-                                        type="number"
-                                        className="form-control form-control-sm border-info-subtle shadow-none"
-                                        value={item.UnitPrice}
-                                        onChange={(e) => onUpdateMedicine(index, 'UnitPrice', parseFloat(e.target.value) || 0)}
-                                        min="0"
-                                        style={{ backgroundColor: '#f8fcff' }}
-                                    />
-                                </td>
-                                <td className="fw-bold text-primary">
+                                <td className="fw-bold text-dark">
                                     {calculateSubTotal(item.Quantity, item.UnitPrice).toLocaleString()}
+                                    <span className="ms-1 text-muted small fw-normal">đ</span>
                                 </td>
-                                <td className="text-center pe-3">
+                                <td className="text-center pe-4">
                                     <button
-                                        className="btn btn-sm btn-link text-danger p-0"
-                                        title="Xóa khỏi danh sách"
+                                        className="btn btn-sm btn-light text-danger border-0 rounded-circle p-2 hover-shadow"
+                                        title="Xóa thuốc này"
                                         onClick={() => onRemoveMedicine(index)}
+                                        style={{ width: '32px', height: '32px' }}
                                     >
-                                        <i className="bi bi-x-circle-fill"></i>
+                                        <i className="bi bi-trash3-fill"></i>
                                     </button>
                                 </td>
                             </tr>
                         ))
                     ) : (
                         <tr>
-                            <td colSpan="7" className="text-center py-5">
-                                <div className="text-muted py-2 fst-italic">
-                                    <i className="bi bi-search me-2"></i>Chưa có thuốc nào được chọn vào bảng
+                            <td colSpan="6" className="text-center py-5">
+                                <div className="py-4">
+                                    <i className="bi bi-box-seam display-4 text-light mb-3 d-block"></i>
+                                    <p className="text-muted fst-italic mb-0">Chưa có thuốc nào trong danh sách nhập hàng.</p>
+                                    <small className="text-black-50">Vui lòng chọn danh mục và thuốc ở phía trên.</small>
                                 </div>
                             </td>
                         </tr>
                     )}
                 </tbody>
-                {medicines.length > 0 && (
-                    <tfoot className="table-light">
-                        <tr>
-                            <td colSpan="5" className="text-end fw-bold py-3 fs-5">TỔNG CỘNG:</td>
-                            <td colSpan="2" className="fw-bold py-3 fs-5 text-primary ps-0">
-                                {totalAmount.toLocaleString()} VNĐ
-                            </td>
-                        </tr>
-                    </tfoot>
-                )}
             </table>
+
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                .hover-bg-light:hover { background-color: #fbfcfe; }
+                .transition-all { transition: all 0.2s ease; }
+                .hover-shadow:hover { box-shadow: 0 2px 5px rgba(0,0,0,0.1); transform: translateY(-1px); }
+            ` }} />
         </div>
     );
 };

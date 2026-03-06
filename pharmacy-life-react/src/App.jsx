@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ImportList from './pages/Dashboard/Import/ImportList';
 import ImportCreate from './pages/Dashboard/Import/ImportCreate';
+import ImportDetail from './pages/Dashboard/Import/ImportDetail';
+import ImportEdit from './pages/Dashboard/Import/ImportEdit';
 import UserProfile from './pages/Profile/UserProfile';
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -58,6 +60,8 @@ function App() {
             <Route path="/dashboard" element={<HomePage />} />
             <Route path="/dashboard/import/list" element={<ImportList />} />
             <Route path="/dashboard/import/create" element={<ImportCreate />} />
+            <Route path="/dashboard/import/detail/:id" element={<ImportDetail />} />
+            <Route path="/dashboard/import/edit/:id" element={<ImportEdit />} />
             <Route path="/profile" element={<UserProfile />} />
           </Routes>
         </main>

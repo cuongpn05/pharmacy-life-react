@@ -3,7 +3,7 @@
     {
       "CustomerId": 1,
       "CustomerCode": "CUS001",
-      "FullName": "Lê Trường An",
+      "FullName": "Trần Thị B",
       "Email": "thib@example.com",
       "Password": "pwd_456",
       "PhoneNumber": "0911223344",
@@ -11,7 +11,8 @@
       "Dob": "1995-10-20T00:00:00.000Z",
       "Gender": "Nữ",
       "IsActive": true,
-      "CreatedAt": "2026-02-26T21:38:05.850Z"
+      "CreatedAt": "2026-02-26T21:38:05.850Z",
+      "id": "79dd"
     },
     {
       "CustomerId": 2,
@@ -24,7 +25,8 @@
       "Dob": "1988-12-30T00:00:00.000Z",
       "Gender": "Nam",
       "IsActive": true,
-      "CreatedAt": "2026-02-26T21:38:05.850Z"
+      "CreatedAt": "2026-02-26T21:38:05.850Z",
+      "id": "32f6"
     },
     {
       "CustomerId": 3,
@@ -37,7 +39,8 @@
       "Dob": null,
       "Gender": "Nam",
       "IsActive": false,
-      "CreatedAt": "2026-02-26T21:38:05.850Z"
+      "CreatedAt": "2026-02-26T21:38:05.850Z",
+      "id": "3761"
     },
     {
       "CustomerId": 4,
@@ -50,7 +53,8 @@
       "Dob": null,
       "Gender": null,
       "IsActive": true,
-      "CreatedAt": "2026-02-26T21:43:55.690Z"
+      "CreatedAt": "2026-02-26T21:43:55.690Z",
+      "id": "2dde"
     },
     {
       "CustomerId": 5,
@@ -63,21 +67,25 @@
       "Dob": null,
       "Gender": null,
       "IsActive": true,
-      "CreatedAt": "2026-02-26T23:41:11.002Z"
+      "CreatedAt": "2026-02-26T23:41:11.002Z",
+      "id": "ef4b"
     }
   ],
   "Role": [
     {
       "RoleId": 1,
-      "RoleName": "Admin"
+      "RoleName": "Admin",
+      "id": "3272"
     },
     {
       "RoleId": 2,
-      "RoleName": "Staff"
+      "RoleName": "Staff",
+      "id": "6c1b"
     },
     {
       "RoleId": 3,
-      "RoleName": "Customer"
+      "RoleName": "Customer",
+      "id": "f29f"
     }
   ],
   "Staff": [
@@ -94,7 +102,8 @@
       "StaffCreatedAt": null,
       "StaffUpdateAt": null,
       "StaffAddress": "Cantho",
-      "StaffDob": "2026-02-27T00:00:00.000Z"
+      "StaffDob": "2026-02-27T00:00:00.000Z",
+      "id": "6aaa"
     },
     {
       "StaffId": 3,
@@ -109,7 +118,8 @@
       "StaffCreatedAt": "2026-02-21T21:33:41.873Z",
       "StaffUpdateAt": "2026-02-21T21:33:41.873Z",
       "StaffAddress": null,
-      "StaffDob": null
+      "StaffDob": null,
+      "id": "fa92"
     },
     {
       "StaffId": 4,
@@ -124,7 +134,8 @@
       "StaffCreatedAt": "2026-02-21T21:33:41.873Z",
       "StaffUpdateAt": "2026-02-21T21:33:41.873Z",
       "StaffAddress": null,
-      "StaffDob": null
+      "StaffDob": null,
+      "id": "0891"
     },
     {
       "StaffId": 5,
@@ -139,7 +150,8 @@
       "StaffCreatedAt": null,
       "StaffUpdateAt": null,
       "StaffAddress": "",
-      "StaffDob": null
+      "StaffDob": null,
+      "id": "64f9"
     },
     {
       "StaffId": 6,
@@ -154,99 +166,118 @@
       "StaffCreatedAt": null,
       "StaffUpdateAt": null,
       "StaffAddress": "",
-      "StaffDob": null
+      "StaffDob": null,
+      "id": "4812"
     }
   ],
   "Category": [
     {
       "CategoryId": 1,
       "CategoryCode": "CAT001",
-      "CategoryName": "Thuốc dị ứng"
+      "CategoryName": "Thuốc dị ứng",
+      "id": "06c4"
     },
     {
       "CategoryId": 2,
       "CategoryCode": "CAT002",
-      "CategoryName": "Thuốc giải độc, khử độc & hỗ trợ cai nghiện"
+      "CategoryName": "Thuốc giải độc, khử độc & hỗ trợ cai nghiện",
+      "id": "3da6"
     },
     {
       "CategoryId": 3,
       "CategoryCode": "CAT003",
-      "CategoryName": "Thuốc da liễu"
+      "CategoryName": "Thuốc da liễu",
+      "id": "66e4"
     },
     {
       "CategoryId": 4,
       "CategoryCode": "CAT004",
-      "CategoryName": "Miếng dán, cao xoa, dầu"
+      "CategoryName": "Miếng dán, cao xoa, dầu",
+      "id": "1daa"
     },
     {
       "CategoryId": 5,
       "CategoryCode": "CAT005",
-      "CategoryName": "Thuốc cơ - xương - khớp"
+      "CategoryName": "Thuốc cơ - xương - khớp",
+      "id": "8943"
     },
     {
       "CategoryId": 6,
       "CategoryCode": "CAT006",
-      "CategoryName": "Thuốc bổ & vitamin"
+      "CategoryName": "Thuốc bổ & vitamin",
+      "id": "3435"
     },
     {
       "CategoryId": 7,
       "CategoryCode": "CAT007",
-      "CategoryName": "Thuốc giảm đau, hạ sốt, kháng viêm"
+      "CategoryName": "Thuốc giảm đau, hạ sốt, kháng viêm",
+      "id": "55de"
     },
     {
       "CategoryId": 8,
       "CategoryCode": "CAT008",
-      "CategoryName": "Thuốc hô hấp"
+      "CategoryName": "Thuốc hô hấp",
+      "id": "7430"
     },
     {
       "CategoryId": 9,
       "CategoryCode": "CAT009",
-      "CategoryName": "Thuốc kháng sinh, kháng nấm"
+      "CategoryName": "Thuốc kháng sinh, kháng nấm",
+      "id": "021e"
     },
     {
       "CategoryId": 10,
       "CategoryCode": "CAT010",
-      "CategoryName": "Thuốc Mắt, Tai, Mũi, Họng"
+      "CategoryName": "Thuốc Mắt, Tai, Mũi, Họng",
+      "id": "0b93"
     },
     {
       "CategoryId": 11,
       "CategoryCode": "CAT011",
-      "CategoryName": "Thuốc hệ thần kinh"
+      "CategoryName": "Thuốc hệ thần kinh",
+      "id": "a932"
     },
     {
       "CategoryId": 12,
       "CategoryCode": "CAT012",
-      "CategoryName": "Thuốc ung thư"
+      "CategoryName": "Thuốc ung thư",
+      "id": "83ac"
     },
     {
       "CategoryId": 13,
       "CategoryCode": "CAT013",
-      "CategoryName": "Thuốc tim mạch & máu"
+      "CategoryName": "Thuốc tim mạch & máu",
+      "id": "7781"
     },
     {
       "CategoryId": 14,
       "CategoryCode": "CAT014",
-      "CategoryName": "Thuốc tiêm chích & dịch truyền"
+      "CategoryName": "Thuốc tiêm chích & dịch truyền",
+      "id": "ff21"
     },
     {
       "CategoryId": 15,
       "CategoryCode": "CAT015",
-      "CategoryName": "Thuốc tiêu hóa & gan mật"
+      "CategoryName": "Thuốc tiêu hóa & gan mật",
+      "id": "8624"
     },
     {
       "CategoryId": 16,
       "CategoryCode": "CAT016",
-      "CategoryName": "Thuốc tiết niệu - sinh dục"
+      "CategoryName": "Thuốc tiết niệu - sinh dục",
+      "id": "82f4"
     },
     {
       "CategoryId": 17,
       "CategoryCode": "CAT017",
-      "CategoryName": "Thuốc trị tiểu đường"
+      "CategoryName": "Thuốc trị tiểu đường",
+      "id": "ac34"
     },
     {
       "CategoryId": 18,
       "CategoryCode": "CAT018",
-      "CategoryName": "Thuốc tê bôi / gây tê"
+      "CategoryName": "Thuốc tê bôi / gây tê",
+      "id": "55e4"
     }
   ],
   "Medicine": [
@@ -261,7 +292,8 @@
       "SellingPrice": 60000,
       "ShortDescription": "Exopadin (fexofenadin 60mg) là thuốc kháng histamin thế hệ 2 giúp giảm triệu chứng viêm mũi dị ứng theo mùa và mày đay mãn tính ở người ≥12 tuổi. Ít gây buồn ngủ.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2bbf"
     },
     {
       "MedicineId": 2,
@@ -274,7 +306,8 @@
       "SellingPrice": 40000,
       "ShortDescription": "Cetirizin 10mg là thuốc kháng histamin thế hệ hai giúp giảm ngứa, nổi mề đay, viêm mũi dị ứng mà không gây buồn ngủ đáng kể.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu2.png",
-      "RemainingQuantity": 40
+      "RemainingQuantity": 40,
+      "id": "298c"
     },
     {
       "MedicineId": 3,
@@ -287,7 +320,8 @@
       "SellingPrice": 20000,
       "ShortDescription": "Clorpheniramin 4mg là thuốc kháng histamin thế hệ 1, giúp giảm hắt hơi, sổ mũi, ngứa mũi, mày đay và viêm da dị ứng.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "a07f"
     },
     {
       "MedicineId": 4,
@@ -300,7 +334,8 @@
       "SellingPrice": 25000,
       "ShortDescription": "Allerphast 180mg (fexofenadin) giúp giảm nhanh triệu chứng viêm mũi dị ứng và mày đay mạn tính vô căn.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu4.png",
-      "RemainingQuantity": 49
+      "RemainingQuantity": 49,
+      "id": "3bed"
     },
     {
       "MedicineId": 5,
@@ -313,7 +348,8 @@
       "SellingPrice": 38000,
       "ShortDescription": "Thuốc Histalong – L 5mg chứa Levocetirizine, giúp điều trị hiệu quả viêm mũi dị ứng và mày đay.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0327"
     },
     {
       "MedicineId": 6,
@@ -326,7 +362,8 @@
       "SellingPrice": 48000,
       "ShortDescription": "Cetirizine Stada 10mg giúp giảm nhanh các triệu chứng viêm mũi dị ứng và mề đay mạn tính.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2a28"
     },
     {
       "MedicineId": 7,
@@ -339,7 +376,8 @@
       "SellingPrice": 85000,
       "ShortDescription": "Fefasdin 60 chứa fexofenadin 60mg, giúp giảm nhanh triệu chứng viêm mũi dị ứng và mề đay mạn tính.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f65b"
     },
     {
       "MedicineId": 8,
@@ -352,7 +390,8 @@
       "SellingPrice": 2500,
       "ShortDescription": "Thuốc Fexofenadine Hydrochloride 180mg An Thiên giúp giảm nhanh các triệu chứng viêm mũi dị ứng theo mùa.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "31fc"
     },
     {
       "MedicineId": 9,
@@ -365,7 +404,8 @@
       "SellingPrice": 100000,
       "ShortDescription": "Vomina Plus 50mg chứa Dimenhydrinat giúp phòng và điều trị buồn nôn, chóng mặt khi say tàu xe.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "981f"
     },
     {
       "MedicineId": 10,
@@ -378,7 +418,8 @@
       "SellingPrice": 87000,
       "ShortDescription": "Siro Aerius (desloratadine) giúp giảm nhanh triệu chứng viêm mũi dị ứng và mày đay cho cả trẻ nhỏ và người lớn.",
       "ImageUrl": "/assets/img/thuoc-di-ung/tdu10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ec8e"
     },
     {
       "MedicineId": 11,
@@ -391,7 +432,8 @@
       "SellingPrice": 36000,
       "ShortDescription": "Viên nhai OH NO chứa Nicotine 2mg hỗ trợ cai nghiện thuốc lá, giảm cơn thèm thuốc và các triệu chứng khi ngưng hút thuốc.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4ee8"
     },
     {
       "MedicineId": 12,
@@ -404,7 +446,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Thuốc tiêm Vinluta có thành phần chính là Glutathion giúp giảm độc tính của xạ trị, hóa chất điều trị ung thư.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1e56"
     },
     {
       "MedicineId": 13,
@@ -417,7 +460,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Glumidtab 600 (Glutathione 600mg) hỗ trợ giảm độc tính xạ trị, hóa chất ung thư, điều trị xơ gan, viêm gan.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "7862"
     },
     {
       "MedicineId": 14,
@@ -430,7 +474,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Methionin 250mg dùng điều trị quá liều paracetamol, phòng ngừa tổn thương gan.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b7e9"
     },
     {
       "MedicineId": 15,
@@ -443,7 +488,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Thuốc nước uống Bông Sen hỗ trợ cắt cơn cai nghiện ma túy cho người mới nghiện và nghiện lâu năm.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "e726"
     },
     {
       "MedicineId": 16,
@@ -456,7 +502,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Jadenu 180mg (Deferasirox) dùng điều trị quá tải sắt mạn tính do truyền máu thường xuyên.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "80f2"
     },
     {
       "MedicineId": 17,
@@ -469,7 +516,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Thuốc Sevelamer Carbonate 800mg dùng kiểm soát tình trạng tăng phosphat huyết ở bệnh nhân thẩm tách.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "55e9"
     },
     {
       "MedicineId": 18,
@@ -482,7 +530,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Thuốc Mifros (Penicilamin) dùng điều trị bệnh Wilson, cystin niệu và nhiễm độc kim loại nặng.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "7bcd"
     },
     {
       "MedicineId": 19,
@@ -495,7 +544,8 @@
       "SellingPrice": 75000,
       "ShortDescription": "Acetylcystein được dùng làm thuốc tiêu chất nhầy và đặc biệt là giải độc khi quá liều Paracetamol.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd9.png",
-      "RemainingQuantity": 100
+      "RemainingQuantity": 100,
+      "id": "c37f"
     },
     {
       "MedicineId": 20,
@@ -508,7 +558,8 @@
       "SellingPrice": 45000,
       "ShortDescription": "Than hoạt tính giúp hấp phụ các chất độc trong đường tiêu hóa, dùng trong cấp cứu ngộ độc thực phẩm.",
       "ImageUrl": "/assets/img/thuoc-giai-doc/gd10.png",
-      "RemainingQuantity": 80
+      "RemainingQuantity": 80,
+      "id": "3309"
     },
     {
       "MedicineId": 21,
@@ -521,7 +572,8 @@
       "SellingPrice": 11000,
       "ShortDescription": "Thuốc bôi Promethazin Cream 2% Medipharco dùng điều trị ngứa sẩn, mày đay, côn trùng đốt.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b179"
     },
     {
       "MedicineId": 22,
@@ -534,7 +586,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Kem bôi Lifedovate (Clobetasone butyrate 0.05%) điều trị viêm, ngứa đáp ứng với corticosteroid.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ffd4"
     },
     {
       "MedicineId": 23,
@@ -547,7 +600,8 @@
       "SellingPrice": 8500,
       "ShortDescription": "Thuốc PVP-Iodine 10% dùng sát trùng vết thương, vết bỏng nhẹ.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "dd6b"
     },
     {
       "MedicineId": 24,
@@ -560,7 +614,8 @@
       "SellingPrice": 29000,
       "ShortDescription": "Thuốc bôi ngoài da Biroxim Cream 1% chứa Clotrimazole điều trị các bệnh nấm da.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f407"
     },
     {
       "MedicineId": 25,
@@ -573,7 +628,8 @@
       "SellingPrice": 20500,
       "ShortDescription": "Eumovate Cream chứa Clobetasone butyrate giúp giảm viêm và ngứa da.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "cc54"
     },
     {
       "MedicineId": 26,
@@ -586,7 +642,8 @@
       "SellingPrice": 16000,
       "ShortDescription": "LeoPovidone 10% dùng điều trị vết thương và ngăn ngừa nhiễm trùng.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "dfa9"
     },
     {
       "MedicineId": 27,
@@ -599,7 +656,8 @@
       "SellingPrice": 75000,
       "ShortDescription": "Kem Nizoral (Ketoconazole) điều trị các bệnh nấm ngoài da.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "60aa"
     },
     {
       "MedicineId": 28,
@@ -612,7 +670,8 @@
       "SellingPrice": 4300,
       "ShortDescription": "Hồ Nước HDPharma dùng điều trị viêm da, làm dịu da và hỗ trợ chàm eczema.",
       "ImageUrl": "/assets/img/thuoc-da-lieu/dl10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5233"
     },
     {
       "MedicineId": 29,
@@ -625,7 +684,8 @@
       "SellingPrice": 29000,
       "ShortDescription": "Cao xoa Sao Vàng dùng trong các trường hợp cảm cúm, nhức đầu.",
       "ImageUrl": "/assets/img/mieng-dan/md1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "87cf"
     },
     {
       "MedicineId": 30,
@@ -638,7 +698,8 @@
       "SellingPrice": 80000,
       "ShortDescription": "Dầu gừng Thái Dương giúp giảm đau đầu, đau lưng, đau vai gáy.",
       "ImageUrl": "/assets/img/mieng-dan/md2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6cdf"
     },
     {
       "MedicineId": 31,
@@ -651,7 +712,8 @@
       "SellingPrice": 30000,
       "ShortDescription": "Dầu gừng Thái Dương dùng giảm đau đầu, đau lưng, đau vai gáy.",
       "ImageUrl": "/assets/img/mieng-dan/md3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2098"
     },
     {
       "MedicineId": 32,
@@ -664,7 +726,8 @@
       "SellingPrice": 75000,
       "ShortDescription": "Dầu khuynh diệp OPC dùng phòng và trị cảm cúm, sổ mũi.",
       "ImageUrl": "/assets/img/mieng-dan/md4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "217a"
     },
     {
       "MedicineId": 33,
@@ -677,7 +740,8 @@
       "SellingPrice": 31500,
       "ShortDescription": "Salonsip Gel Patch giúp giảm đau, kháng viêm do mỏi cơ.",
       "ImageUrl": "/assets/img/mieng-dan/md5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9a12"
     },
     {
       "MedicineId": 34,
@@ -690,7 +754,8 @@
       "SellingPrice": 42000,
       "ShortDescription": "Salonpas Pain Relief Patch giúp giảm đau cổ, vai, lưng.",
       "ImageUrl": "/assets/img/mieng-dan/md6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5cf9"
     },
     {
       "MedicineId": 35,
@@ -703,7 +768,8 @@
       "SellingPrice": 46000,
       "ShortDescription": "Salonpas Gel giảm đau cơ và khớp, dùng bôi ngoài da.",
       "ImageUrl": "/assets/img/mieng-dan/md7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4288"
     },
     {
       "MedicineId": 36,
@@ -716,7 +782,8 @@
       "SellingPrice": 57000,
       "ShortDescription": "Dầu nóng Mặt Trời OPC dùng xoa bóp giảm nhức mỏi.",
       "ImageUrl": "/assets/img/mieng-dan/md8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0f36"
     },
     {
       "MedicineId": 37,
@@ -729,7 +796,8 @@
       "SellingPrice": 22000,
       "ShortDescription": "Cao xoa bóp Bạch Hổ Hoạt Lạc dùng giảm đau lưng và đau thần kinh tọa.",
       "ImageUrl": "/assets/img/mieng-dan/md9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ec93"
     },
     {
       "MedicineId": 38,
@@ -742,7 +810,8 @@
       "SellingPrice": 37000,
       "ShortDescription": "Cồn Xoa Bóp An Triệu hỗ trợ giảm đau phong thấp, đau lưng.",
       "ImageUrl": "/assets/img/mieng-dan/md10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5f3d"
     },
     {
       "MedicineId": 39,
@@ -755,7 +824,8 @@
       "SellingPrice": 99000,
       "ShortDescription": "Thuốc Xương Khớp Trường Phúc hỗ trợ giảm đau khớp và đau thần kinh.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "366e"
     },
     {
       "MedicineId": 40,
@@ -768,7 +838,8 @@
       "SellingPrice": 185000,
       "ShortDescription": "CalciD Soft bổ sung Calci và Vitamin D, hỗ trợ phòng loãng xương.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "848e"
     },
     {
       "MedicineId": 41,
@@ -781,7 +852,8 @@
       "SellingPrice": 4667,
       "ShortDescription": "Viên vai gáy Abipha với các dược liệu Hoàng kỳ, Phòng phong, Đương quy... hỗ trợ giảm đau vai gáy, viêm quanh khớp vai và thoái hóa cột sống cổ.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "13db"
     },
     {
       "MedicineId": 42,
@@ -794,7 +866,8 @@
       "SellingPrice": 5000,
       "ShortDescription": "Glucosamine sulfate giúp giảm triệu chứng thoái hóa khớp gối nhẹ và trung bình.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "900d"
     },
     {
       "MedicineId": 43,
@@ -807,7 +880,8 @@
       "SellingPrice": 300,
       "ShortDescription": "Calcium-D S.Pharm chứa Calci gluconat và Vitamin D3 giúp bổ sung calci, phòng và điều trị loãng xương.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d96f"
     },
     {
       "MedicineId": 44,
@@ -820,7 +894,8 @@
       "SellingPrice": 4333,
       "ShortDescription": "Natecal D3 chứa Calcium và Vitamin D3 hỗ trợ phòng ngừa loãng xương và gãy xương.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "422a"
     },
     {
       "MedicineId": 45,
@@ -833,7 +908,8 @@
       "SellingPrice": 480000,
       "ShortDescription": "Viartril-S glucosamine sulfate 1500mg giúp giảm triệu chứng thoái hóa khớp nhẹ và trung bình.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9573"
     },
     {
       "MedicineId": 46,
@@ -846,7 +922,8 @@
       "SellingPrice": 46000,
       "ShortDescription": "Calcium Hasan dạng viên sủi giúp bổ sung calci cho người cao tuổi và phụ nữ mang thai.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d0ef"
     },
     {
       "MedicineId": 47,
@@ -859,7 +936,8 @@
       "SellingPrice": 117900,
       "ShortDescription": "Briozcal bổ sung canxi và vitamin D3 giúp tăng cường sức khỏe xương.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b101"
     },
     {
       "MedicineId": 48,
@@ -872,7 +950,8 @@
       "SellingPrice": 330000,
       "ShortDescription": "Bonlutin chứa Fish oil, Glucosamine và Chondroitin giúp giảm đau và cải thiện vận động khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d921"
     },
     {
       "MedicineId": 49,
@@ -885,7 +964,8 @@
       "SellingPrice": 280000,
       "ShortDescription": "Glucosamin giúp tái tạo sụn khớp, giảm đau và tăng khả năng vận động.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk11.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1ba3"
     },
     {
       "MedicineId": 50,
@@ -898,7 +978,8 @@
       "SellingPrice": 310000,
       "ShortDescription": "Flexsa chứa glucosamin sulfate giúp giảm đau và làm chậm tiến triển thoái hóa khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk12.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "29d6"
     },
     {
       "MedicineId": 51,
@@ -911,7 +992,8 @@
       "SellingPrice": 265000,
       "ShortDescription": "Jex Max chứa chiết xuất thiên nhiên giúp giảm đau khớp, cứng khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk13.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b489"
     },
     {
       "MedicineId": 52,
@@ -924,7 +1006,8 @@
       "SellingPrice": 295000,
       "ShortDescription": "Arthrostop Plus giúp giảm viêm, đau khớp và tăng linh hoạt vận động.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk14.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "70e1"
     },
     {
       "MedicineId": 53,
@@ -937,7 +1020,8 @@
       "SellingPrice": 420000,
       "ShortDescription": "Sụn cá mập giúp bảo vệ sụn khớp, giảm đau và tăng cường sức khỏe khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk15.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5678"
     },
     {
       "MedicineId": 54,
@@ -950,7 +1034,8 @@
       "SellingPrice": 550000,
       "ShortDescription": "Blackmores Glucosamine giúp duy trì sụn khớp và giảm đau khớp hiệu quả.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk16.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3c75"
     },
     {
       "MedicineId": 55,
@@ -963,7 +1048,8 @@
       "SellingPrice": 490000,
       "ShortDescription": "Glucosamine Kirkland giúp cải thiện chức năng khớp và giảm thoái hóa.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk17.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0a63"
     },
     {
       "MedicineId": 56,
@@ -976,7 +1062,8 @@
       "SellingPrice": 360000,
       "ShortDescription": "Jointace Omega-3 giúp nuôi dưỡng sụn khớp và giảm cứng khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk18.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "597c"
     },
     {
       "MedicineId": 57,
@@ -989,7 +1076,8 @@
       "SellingPrice": 275000,
       "ShortDescription": "Arthroflex Forte giúp giảm viêm và cải thiện vận động khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk19.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f585"
     },
     {
       "MedicineId": 58,
@@ -1002,7 +1090,8 @@
       "SellingPrice": 325000,
       "ShortDescription": "Collagen type II giúp bảo vệ sụn khớp và giảm đau khớp.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk20.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "a279"
     },
     {
       "MedicineId": 59,
@@ -1015,7 +1104,8 @@
       "SellingPrice": 450000,
       "ShortDescription": "Nature Made Glucosamine giúp duy trì sức khỏe xương khớp lâu dài.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk21.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0e10"
     },
     {
       "MedicineId": 60,
@@ -1028,7 +1118,8 @@
       "SellingPrice": 240000,
       "ShortDescription": "JointCare MSM giúp giảm đau, viêm khớp và tăng linh hoạt vận động.",
       "ImageUrl": "/assets/img/co-xuong-khop/cxk22.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "56ff"
     },
     {
       "MedicineId": 61,
@@ -1041,7 +1132,8 @@
       "SellingPrice": 40000,
       "ShortDescription": "Tovalgan EF (Paracetamol 500mg) là viên sủi bọt giảm đau hạ sốt, dạng dễ uống.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1d70"
     },
     {
       "MedicineId": 62,
@@ -1054,7 +1146,8 @@
       "SellingPrice": 48000,
       "ShortDescription": "Glotadol 250 (Paracetamol 250mg) là bột pha uống giảm đau hạ sốt cho trẻ em.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "dbe5"
     },
     {
       "MedicineId": 63,
@@ -1067,7 +1160,8 @@
       "SellingPrice": 44000,
       "ShortDescription": "Glotadol 150mg dùng hạ sốt và giảm đau do cảm cúm, mọc răng.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5a03"
     },
     {
       "MedicineId": 64,
@@ -1080,7 +1174,8 @@
       "SellingPrice": 11000,
       "ShortDescription": "Ameflu phối hợp Paracetamol – Phenylephrine – Caffeine, không gây buồn ngủ.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f24d"
     },
     {
       "MedicineId": 65,
@@ -1093,7 +1188,8 @@
       "SellingPrice": 81600,
       "ShortDescription": "Panactol 250mg là bột sủi Paracetamol vị ngọt cho trẻ em.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3ded"
     },
     {
       "MedicineId": 66,
@@ -1106,7 +1202,8 @@
       "SellingPrice": 1500,
       "ShortDescription": "Panactol 150mg giúp hạ sốt và giảm đau nhẹ đến vừa.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "8949"
     },
     {
       "MedicineId": 67,
@@ -1119,7 +1216,8 @@
       "SellingPrice": 32000,
       "ShortDescription": "Bivinadol 500mg dạng sủi giúp hạ sốt nhanh và giảm đau.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "fc79"
     },
     {
       "MedicineId": 68,
@@ -1132,7 +1230,8 @@
       "SellingPrice": 90000,
       "ShortDescription": "Glotadol 325mg dạng viên nén bao phim giảm đau hạ sốt.",
       "ImageUrl": "/assets/img/thuoc-giam-dau/gd10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0663"
     },
     {
       "MedicineId": 69,
@@ -1145,7 +1244,8 @@
       "SellingPrice": 48000,
       "ShortDescription": "Siro HoAstex-S thảo dược giúp giảm ho và viêm đường hô hấp.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "91cc"
     },
     {
       "MedicineId": 70,
@@ -1158,7 +1258,8 @@
       "SellingPrice": 65000,
       "ShortDescription": "Deslotid chứa Desloratadin điều trị dị ứng hiệu quả.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5b8e"
     },
     {
       "MedicineId": 71,
@@ -1171,7 +1272,8 @@
       "SellingPrice": 70000,
       "ShortDescription": "Tocemux 200mg chứa Acetylcysteine tiêu đờm hiệu quả.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9fce"
     },
     {
       "MedicineId": 72,
@@ -1184,7 +1286,8 @@
       "SellingPrice": 44000,
       "ShortDescription": "Siro HoAstex giúp giảm ho, viêm họng và viêm phế quản.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "cbc6"
     },
     {
       "MedicineId": 73,
@@ -1197,7 +1300,8 @@
       "SellingPrice": 45000,
       "ShortDescription": "Deslotid 30ml điều trị viêm mũi dị ứng và mày đay.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9e62"
     },
     {
       "MedicineId": 74,
@@ -1210,7 +1314,8 @@
       "SellingPrice": 48000,
       "ShortDescription": "Star Benko kháng khuẩn đường miệng họng.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2bc0"
     },
     {
       "MedicineId": 75,
@@ -1223,7 +1328,8 @@
       "SellingPrice": 60000,
       "ShortDescription": "Danospan chiết xuất lá thường xuân trị ho có đờm.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b06e"
     },
     {
       "MedicineId": 76,
@@ -1236,7 +1342,8 @@
       "SellingPrice": 85000,
       "ShortDescription": "HoAstex dạng gói tiện lợi, giảm ho hiệu quả.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5a06"
     },
     {
       "MedicineId": 77,
@@ -1249,7 +1356,8 @@
       "SellingPrice": 30000,
       "ShortDescription": "Siro Ambroxol tiêu đờm trong các bệnh hô hấp.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f79a"
     },
     {
       "MedicineId": 78,
@@ -1262,7 +1370,8 @@
       "SellingPrice": 44000,
       "ShortDescription": "Strepsils Maxpro chứa Flurbiprofen giảm đau họng nhanh.",
       "ImageUrl": "/assets/img/thuoc-ho-hap/HH10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6bea"
     },
     {
       "MedicineId": 79,
@@ -1275,7 +1384,8 @@
       "SellingPrice": 8000,
       "ShortDescription": "Fucagi 500mg chứa Mebendazol điều trị giun đường ruột.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "64ec"
     },
     {
       "MedicineId": 80,
@@ -1288,7 +1398,8 @@
       "SellingPrice": 10000,
       "ShortDescription": "Agiclovir 5% điều trị nhiễm Herpes simplex và zoster.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0c45"
     },
     {
       "MedicineId": 81,
@@ -1301,7 +1412,8 @@
       "SellingPrice": 22000,
       "ShortDescription": "Fugacar 500mg chứa Mebendazole trị nhiều loại giun.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "acbb"
     },
     {
       "MedicineId": 82,
@@ -1314,7 +1426,8 @@
       "SellingPrice": 2200,
       "ShortDescription": "Mebendazole Mekophar điều trị các loại giun.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2fa0"
     },
     {
       "MedicineId": 83,
@@ -1327,7 +1440,8 @@
       "SellingPrice": 4000,
       "ShortDescription": "Alzental 400mg chứa Albendazol trị giun và ký sinh trùng.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2733"
     },
     {
       "MedicineId": 84,
@@ -1340,7 +1454,8 @@
       "SellingPrice": 4800,
       "ShortDescription": "Fubenzon 500mg chứa Mebendazol trị giun.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "eeb7"
     },
     {
       "MedicineId": 85,
@@ -1353,7 +1468,8 @@
       "SellingPrice": 5000,
       "ShortDescription": "Azoltel 400mg chứa Albendazol trị giun và ký sinh trùng.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f329"
     },
     {
       "MedicineId": 86,
@@ -1366,7 +1482,8 @@
       "SellingPrice": 7000,
       "ShortDescription": "Viên nhai Mebendazol điều trị giun tròn.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "05af"
     },
     {
       "MedicineId": 87,
@@ -1379,7 +1496,8 @@
       "SellingPrice": 68333,
       "ShortDescription": "Timbov chứa Clotrimazol trị viêm âm đạo và nấm.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "e18a"
     },
     {
       "MedicineId": 88,
@@ -1392,7 +1510,8 @@
       "SellingPrice": 98000,
       "ShortDescription": "Shampoo Clobetasol điều trị vảy nến da đầu.",
       "ImageUrl": "/assets/img/thuoc-khang-sinh/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f1f1"
     },
     {
       "MedicineId": 89,
@@ -1405,7 +1524,8 @@
       "SellingPrice": 51990,
       "ShortDescription": "V.Rohto Vitamin giúp giảm mỏi mắt và khô mắt.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d9dc"
     },
     {
       "MedicineId": 90,
@@ -1418,7 +1538,8 @@
       "SellingPrice": 30000,
       "ShortDescription": "Nước súc miệng Thái Dương sát trùng và khử mùi hôi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "85a3"
     },
     {
       "MedicineId": 91,
@@ -1431,7 +1552,8 @@
       "SellingPrice": 9000,
       "ShortDescription": "Ống hít Sao Vàng giúp thông mũi và giảm nghẹt mũi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1210"
     },
     {
       "MedicineId": 92,
@@ -1444,7 +1566,8 @@
       "SellingPrice": 4000,
       "ShortDescription": "Dung dịch Natri Clorid 0,9% rửa mắt, mũi an toàn.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "afd5"
     },
     {
       "MedicineId": 93,
@@ -1457,7 +1580,8 @@
       "SellingPrice": 25000,
       "ShortDescription": "Otrera chứa Xylometazoline giảm nghẹt mũi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1199"
     },
     {
       "MedicineId": 94,
@@ -1470,7 +1594,8 @@
       "SellingPrice": 20000,
       "ShortDescription": "Eyetamin giúp giảm mỏi và đỏ mắt.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "8f91"
     },
     {
       "MedicineId": 95,
@@ -1483,7 +1608,8 @@
       "SellingPrice": 3167,
       "ShortDescription": "Abipha Cap hỗ trợ điều trị viêm xoang và viêm mũi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "c15c"
     },
     {
       "MedicineId": 96,
@@ -1496,7 +1622,8 @@
       "SellingPrice": 43000,
       "ShortDescription": "Nasomom giúp vệ sinh mũi và giảm nghẹt mũi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4c6c"
     },
     {
       "MedicineId": 97,
@@ -1509,7 +1636,8 @@
       "SellingPrice": 39000,
       "ShortDescription": "Nasomom-4 cho trẻ em, an toàn và hiệu quả.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "369e"
     },
     {
       "MedicineId": 98,
@@ -1522,7 +1650,8 @@
       "SellingPrice": 3200,
       "ShortDescription": "Natri Clorid Pharmedic dùng rửa mắt và mũi.",
       "ImageUrl": "/assets/img/thuoc-mat-tai-mui-hong/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9fe6"
     },
     {
       "MedicineId": 99,
@@ -1535,7 +1664,8 @@
       "SellingPrice": 1780,
       "ShortDescription": "Mimosa OPC giúp an thần và cải thiện giấc ngủ.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "fb46"
     },
     {
       "MedicineId": 100,
@@ -1548,7 +1678,8 @@
       "SellingPrice": 91000,
       "ShortDescription": "Momvina Hadiphar phòng và trị say tàu xe.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0888"
     },
     {
       "MedicineId": 101,
@@ -1561,7 +1692,8 @@
       "SellingPrice": 2800,
       "ShortDescription": "Npluvico Nature chứa cao Bạch quả và Đinh lăng, giúp cải thiện tuần hoàn não, tăng trí nhớ, giảm chóng mặt và hỗ trợ điều trị rối loạn tiền đình.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "adc4"
     },
     {
       "MedicineId": 102,
@@ -1574,7 +1706,8 @@
       "SellingPrice": 60000,
       "ShortDescription": "Laferine chứa cao khô lá Bạch quả giúp cải thiện trí nhớ và khả năng tập trung.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4706"
     },
     {
       "MedicineId": 103,
@@ -1587,7 +1720,8 @@
       "SellingPrice": 73000,
       "ShortDescription": "Thuốc thảo dược giúp an thần, dưỡng tâm và hỗ trợ điều trị mất ngủ.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5ccf"
     },
     {
       "MedicineId": 104,
@@ -1600,7 +1734,8 @@
       "SellingPrice": 78000,
       "ShortDescription": "Hoàn An Thần giúp cải thiện giấc ngủ, giảm căng thẳng và mệt mỏi.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b2ee"
     },
     {
       "MedicineId": 105,
@@ -1613,7 +1748,8 @@
       "SellingPrice": 6400,
       "ShortDescription": "Teburap chứa cao lá bạch quả giúp cải thiện tuần hoàn não và ngoại biên.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "45a7"
     },
     {
       "MedicineId": 106,
@@ -1626,7 +1762,8 @@
       "SellingPrice": 2000,
       "ShortDescription": "Savi Leucin giúp điều trị triệu chứng chóng mặt và rối loạn thăng bằng.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d2df"
     },
     {
       "MedicineId": 107,
@@ -1639,7 +1776,8 @@
       "SellingPrice": 156000,
       "ShortDescription": "Bufecol chứa Ibuprofen giúp giảm đau, hạ sốt và chống viêm.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "142b"
     },
     {
       "MedicineId": 108,
@@ -1652,7 +1790,8 @@
       "SellingPrice": 7600,
       "ShortDescription": "Interginko chứa cao lá Bạch quả giúp tăng lưu thông máu não.",
       "ImageUrl": "/assets/img/thuoc-he-than-kinh/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "c1df"
     },
     {
       "MedicineId": 109,
@@ -1665,7 +1804,8 @@
       "SellingPrice": 450000,
       "ShortDescription": "Nolvadex-D (Tamoxifen) điều trị và ngăn ngừa ung thư vú phụ thuộc hormone.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "228c"
     },
     {
       "MedicineId": 110,
@@ -1678,7 +1818,8 @@
       "SellingPrice": 85000,
       "ShortDescription": "Hemetrex chứa Methotrexat – thuốc ức chế miễn dịch và chống chuyển hóa.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4e97"
     },
     {
       "MedicineId": 111,
@@ -1691,7 +1832,8 @@
       "SellingPrice": 125000,
       "ShortDescription": "Heradrea chứa Hydroxyurea – thuốc chống ung thư đường uống.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2bec"
     },
     {
       "MedicineId": 112,
@@ -1704,7 +1846,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Sandimmun Neoral là thuốc ức chế miễn dịch dùng trong ghép tạng.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "062e"
     },
     {
       "MedicineId": 113,
@@ -1717,7 +1860,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Ckdcipol-N (Ciclosporin) là thuốc ức chế miễn dịch dùng trong ghép tạng.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3b90"
     },
     {
       "MedicineId": 114,
@@ -1730,7 +1874,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Revolade giúp kích thích sản xuất tiểu cầu trong các bệnh giảm tiểu cầu.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f5b5"
     },
     {
       "MedicineId": 115,
@@ -1743,7 +1888,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Letrozsun là thuốc ức chế aromatase điều trị ung thư vú ở phụ nữ mãn kinh.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "076f"
     },
     {
       "MedicineId": 116,
@@ -1756,7 +1902,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Unitrexates chứa Methotrexate dùng trong ung thư và bệnh tự miễn.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "bfc9"
     },
     {
       "MedicineId": 117,
@@ -1769,7 +1916,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Zoladex là thuốc tiêm depot dùng điều trị ung thư phụ thuộc hormone.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5d3f"
     },
     {
       "MedicineId": 118,
@@ -1782,7 +1930,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Femara (Letrozole) dùng điều trị bổ trợ ung thư vú sau mãn kinh.",
       "ImageUrl": "/assets/img/thuoc-ung-thu/tut10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6b55"
     },
     {
       "MedicineId": 119,
@@ -1795,7 +1944,8 @@
       "SellingPrice": 99000,
       "ShortDescription": "Hoạt Huyết Trường Phúc giúp cải thiện thiểu năng tuần hoàn.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "db62"
     },
     {
       "MedicineId": 120,
@@ -1808,7 +1958,8 @@
       "SellingPrice": 35000,
       "ShortDescription": "Hỗ trợ điều trị thiếu năng tuần hoàn não và rối loạn tiền đình.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ae95"
     },
     {
       "MedicineId": 121,
@@ -1821,7 +1972,8 @@
       "SellingPrice": 78000,
       "ShortDescription": "Dacolfort giúp cải thiện suy tĩnh mạch, trĩ và nặng chân.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "2564"
     },
     {
       "MedicineId": 122,
@@ -1834,7 +1986,8 @@
       "SellingPrice": 240000,
       "ShortDescription": "Henex chứa Diosmin và Hesperidin điều trị suy tĩnh mạch và trĩ.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "e444"
     },
     {
       "MedicineId": 123,
@@ -1847,7 +2000,8 @@
       "SellingPrice": 100000,
       "ShortDescription": "Gikanin giúp điều trị chóng mặt do rối loạn tiền đình.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "b24c"
     },
     {
       "MedicineId": 124,
@@ -1860,7 +2014,8 @@
       "SellingPrice": 115000,
       "ShortDescription": "Hoạt huyết dưỡng não giúp tăng cường tuần hoàn máu não.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "580a"
     },
     {
       "MedicineId": 125,
@@ -1873,7 +2028,8 @@
       "SellingPrice": 98000,
       "ShortDescription": "Cerecaps giúp giảm chóng mặt, đau đầu do thiếu máu não.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1827"
     },
     {
       "MedicineId": 126,
@@ -1886,7 +2042,8 @@
       "SellingPrice": 86000,
       "ShortDescription": "Vintan chứa Acetyl-DL-Leucin điều trị các cơn chóng mặt.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "45da"
     },
     {
       "MedicineId": 127,
@@ -1899,7 +2056,8 @@
       "SellingPrice": 165000,
       "ShortDescription": "Tanakan chứa cao lá Bạch quả giúp cải thiện tuần hoàn não.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6aef"
     },
     {
       "MedicineId": 128,
@@ -1912,7 +2070,8 @@
       "SellingPrice": 190000,
       "ShortDescription": "Cavinton Forte giúp tăng lưu lượng máu não, giảm chóng mặt.",
       "ImageUrl": "/assets/img/thuoc-tim-mach/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "52aa"
     },
     {
       "MedicineId": 129,
@@ -1925,7 +2084,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Dùng làm dung môi pha tiêm và bù nước – điện giải.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6022"
     },
     {
       "MedicineId": 130,
@@ -1938,7 +2098,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Dùng làm dung môi pha tiêm truyền, bù nước và điện giải trong các trường hợp mất nước.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0f03"
     },
     {
       "MedicineId": 131,
@@ -1951,7 +2112,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Cefotaxone là kháng sinh cephalosporin thế hệ 3 điều trị các nhiễm khuẩn nặng.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "79d5"
     },
     {
       "MedicineId": 132,
@@ -1964,7 +2126,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Tanganil chứa acetylleucine điều trị triệu chứng chóng mặt.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "bba7"
     },
     {
       "MedicineId": 133,
@@ -1977,7 +2140,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Morihepamin cung cấp acid amin phân nhánh, hỗ trợ điều trị hội chứng não gan.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4a66"
     },
     {
       "MedicineId": 134,
@@ -1990,7 +2154,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Lovenox chứa enoxaparin dùng dự phòng và điều trị huyết khối tĩnh mạch.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9746"
     },
     {
       "MedicineId": 135,
@@ -2003,7 +2168,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Hydrocortison có tác dụng chống viêm, chống dị ứng và ức chế miễn dịch.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3913"
     },
     {
       "MedicineId": 136,
@@ -2016,7 +2182,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Gentamicin là kháng sinh aminoglycosid điều trị nhiễm khuẩn nặng.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "d036"
     },
     {
       "MedicineId": 137,
@@ -2029,7 +2196,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Depo Medrol chứa methylprednisolon, chống viêm mạnh và ức chế miễn dịch.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "f860"
     },
     {
       "MedicineId": 138,
@@ -2042,7 +2210,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Cerebrolysin giúp cải thiện trí nhớ và phục hồi sau đột quỵ.",
       "ImageUrl": "/assets/img/thuoc-tiem-chich/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3775"
     },
     {
       "MedicineId": 139,
@@ -2055,7 +2224,8 @@
       "SellingPrice": 80000,
       "ShortDescription": "Simegaz Plus giúp trung hòa acid và giảm đầy hơi.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "35af"
     },
     {
       "MedicineId": 140,
@@ -2068,7 +2238,8 @@
       "SellingPrice": 105000,
       "ShortDescription": "Bài thuốc dược liệu hỗ trợ điều trị viêm loét đại tràng.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "3f97"
     },
     {
       "MedicineId": 141,
@@ -2081,7 +2252,8 @@
       "SellingPrice": 99000,
       "ShortDescription": "Bổ Gan Trường Phúc giúp bổ gan, giải độc, hỗ trợ điều trị mề đay, lở ngứa và viêm gan.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "61a0"
     },
     {
       "MedicineId": 142,
@@ -2094,7 +2266,8 @@
       "SellingPrice": 10000,
       "ShortDescription": "Gaviscon Dual Action trung hòa acid, giảm trào ngược và ợ nóng.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1466"
     },
     {
       "MedicineId": 143,
@@ -2107,7 +2280,8 @@
       "SellingPrice": 117000,
       "ShortDescription": "Fudophos (sucralfate) bảo vệ niêm mạc và hỗ trợ lành loét.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ca3e"
     },
     {
       "MedicineId": 144,
@@ -2120,7 +2294,8 @@
       "SellingPrice": 49000,
       "ShortDescription": "Cholapan giúp giảm ợ chua, đầy hơi và khó tiêu.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "1d40"
     },
     {
       "MedicineId": 145,
@@ -2133,7 +2308,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Loperamide giúp điều trị tiêu chảy cấp và mạn.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "68e7"
     },
     {
       "MedicineId": 146,
@@ -2146,7 +2322,8 @@
       "SellingPrice": 150000,
       "ShortDescription": "Duphalac (lactulose) nhuận tràng thẩm thấu, làm mềm phân.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "a1a6"
     },
     {
       "MedicineId": 147,
@@ -2159,7 +2336,8 @@
       "SellingPrice": 50000,
       "ShortDescription": "Smecta bảo vệ niêm mạc tiêu hóa, dùng cho người lớn và trẻ em.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "5fba"
     },
     {
       "MedicineId": 148,
@@ -2172,7 +2350,8 @@
       "SellingPrice": 115000,
       "ShortDescription": "Boganic Forte tăng cường chức năng gan và thải độc.",
       "ImageUrl": "/assets/img/thuoc-tieu-hoa/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "e627"
     },
     {
       "MedicineId": 149,
@@ -2185,7 +2364,8 @@
       "SellingPrice": 15000,
       "ShortDescription": "BK-1 chứa Levonorgestrel dùng trong 72 giờ sau giao hợp.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "61e9"
     },
     {
       "MedicineId": 150,
@@ -2198,7 +2378,8 @@
       "SellingPrice": 99000,
       "ShortDescription": "Bài Thạch Trường Phúc hỗ trợ điều trị sỏi thận và sỏi mật.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ad87"
     },
     {
       "MedicineId": 151,
@@ -2211,7 +2392,8 @@
       "SellingPrice": 60000,
       "ShortDescription": "Ích Mẫu OPC giúp điều hòa kinh nguyệt và giảm đau bụng kinh.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "8cdd"
     },
     {
       "MedicineId": 152,
@@ -2224,7 +2406,8 @@
       "SellingPrice": 55000,
       "ShortDescription": "Cao Ích Mẫu giúp giảm đau bụng kinh và rối loạn kinh nguyệt.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "baf0"
     },
     {
       "MedicineId": 153,
@@ -2237,7 +2420,8 @@
       "SellingPrice": 285000,
       "ShortDescription": "Sâm Nhung Bổ Thận giúp bổ thận, tăng cường sinh lực.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "be46"
     },
     {
       "MedicineId": 154,
@@ -2250,7 +2434,8 @@
       "SellingPrice": 210000,
       "ShortDescription": "Bổ Thận Dương TW3 hỗ trợ cải thiện chức năng sinh lý nam giới.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "9861"
     },
     {
       "MedicineId": 155,
@@ -2263,7 +2448,8 @@
       "SellingPrice": 180000,
       "ShortDescription": "Ích Thận Vương giúp tăng cường chức năng thận và giảm tiểu đêm.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/7.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "7595"
     },
     {
       "MedicineId": 156,
@@ -2276,7 +2462,8 @@
       "SellingPrice": 95000,
       "ShortDescription": "Kim Tiền Thảo hỗ trợ điều trị sỏi thận và sỏi đường tiết niệu.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/8.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "c0aa"
     },
     {
       "MedicineId": 157,
@@ -2289,7 +2476,8 @@
       "SellingPrice": 320000,
       "ShortDescription": "Tiền Liệt Vương giúp giảm tiểu khó, tiểu đêm do phì đại tiền liệt tuyến.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/9.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "cfa1"
     },
     {
       "MedicineId": 158,
@@ -2302,7 +2490,8 @@
       "SellingPrice": 145000,
       "ShortDescription": "Ích Thận Tráng Dương giúp bổ thận, mạnh gân cốt, tăng sinh lực.",
       "ImageUrl": "/assets/img/thuoc-tiet-nieu/10.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "60a2"
     },
     {
       "MedicineId": 159,
@@ -2315,7 +2504,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Metformin 850mg giúp kiểm soát đường huyết.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "98e0"
     },
     {
       "MedicineId": 160,
@@ -2328,7 +2518,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Metformin Denk 1000mg kiểm soát đường huyết hiệu quả.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "8c84"
     },
     {
       "MedicineId": 161,
@@ -2341,7 +2532,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Metformin 500mg giúp kiểm soát đường huyết.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "bceb"
     },
     {
       "MedicineId": 162,
@@ -2354,7 +2546,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Sitagliptin cải thiện kiểm soát đường huyết.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "0602"
     },
     {
       "MedicineId": 163,
@@ -2367,7 +2560,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Tranagliptin cải thiện kiểm soát đường huyết.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "c528"
     },
     {
       "MedicineId": 164,
@@ -2380,7 +2574,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Vildagliptin là thuốc ức chế DPP-4 kiểm soát đường huyết.",
       "ImageUrl": "/assets/img/thuoc-tri-tieu-duong/6.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6aa6"
     },
     {
       "MedicineId": 165,
@@ -2393,7 +2588,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Lidocain 2% dùng gây tê tại chỗ trong các thủ thuật y tế.",
       "ImageUrl": "/assets/img/thuoc-te-boi/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "e161"
     },
     {
       "MedicineId": 166,
@@ -2406,7 +2602,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Lidocain 10% dạng xịt gây tê nhanh niêm mạc miệng và họng.",
       "ImageUrl": "/assets/img/thuoc-te-boi/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "4108"
     },
     {
       "MedicineId": 167,
@@ -2419,7 +2616,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Ethyl Chloride dùng gây tê nhanh bề mặt da trước tiêm chích.",
       "ImageUrl": "/assets/img/thuoc-te-boi/4.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "57e8"
     },
     {
       "MedicineId": 168,
@@ -2432,7 +2630,8 @@
       "SellingPrice": 0,
       "ShortDescription": "Benzocaine gel giúp giảm đau răng và niêm mạc miệng.",
       "ImageUrl": "/assets/img/thuoc-te-boi/5.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "6d2e"
     },
     {
       "MedicineId": 169,
@@ -2445,7 +2644,8 @@
       "SellingPrice": 420000,
       "ShortDescription": "Emla 5% gây tê bề mặt da trước thủ thuật y tế.",
       "ImageUrl": "/assets/img/thuoc-te-boi/1.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "c4bf"
     },
     {
       "MedicineId": 170,
@@ -2458,7 +2658,8 @@
       "SellingPrice": 180000,
       "ShortDescription": "Xylocaine Jelly gây tê và bôi trơn bề mặt niêm mạc.",
       "ImageUrl": "/assets/img/thuoc-te-boi/2.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "ddf9"
     },
     {
       "MedicineId": 171,
@@ -2471,7 +2672,8 @@
       "SellingPrice": 210000,
       "ShortDescription": "Lidocain 10% dạng xịt gây tê nhanh trong thủ thuật y tế.",
       "ImageUrl": "/assets/img/thuoc-te-boi/3.png",
-      "RemainingQuantity": 50
+      "RemainingQuantity": 50,
+      "id": "37c4"
     }
   ],
   "Carts": [
@@ -2481,7 +2683,8 @@
       "MedicineId": 3,
       "CartQuantity": 2,
       "CartCreateAt": "2026-03-04T22:08:11.753Z",
-      "CartUpdate": "2026-03-04T22:09:10.120Z"
+      "CartUpdate": "2026-03-04T22:09:10.120Z",
+      "id": "b647"
     },
     {
       "CartId": 58,
@@ -2489,7 +2692,8 @@
       "MedicineId": 62,
       "CartQuantity": 2,
       "CartCreateAt": "2026-03-04T22:08:13.770Z",
-      "CartUpdate": "2026-03-04T22:09:12.423Z"
+      "CartUpdate": "2026-03-04T22:09:12.423Z",
+      "id": "6708"
     },
     {
       "CartId": 59,
@@ -2497,7 +2701,8 @@
       "MedicineId": 89,
       "CartQuantity": 2,
       "CartCreateAt": "2026-03-04T22:08:15.906Z",
-      "CartUpdate": "2026-03-04T22:08:17.346Z"
+      "CartUpdate": "2026-03-04T22:08:17.346Z",
+      "id": "47b9"
     },
     {
       "CartId": 60,
@@ -2505,7 +2710,8 @@
       "MedicineId": 4,
       "CartQuantity": 1,
       "CartCreateAt": "2026-03-04T22:08:27.643Z",
-      "CartUpdate": "2026-03-04T22:08:27.643Z"
+      "CartUpdate": "2026-03-04T22:08:27.643Z",
+      "id": "cfe0"
     },
     {
       "CartId": 61,
@@ -2513,7 +2719,8 @@
       "MedicineId": 2,
       "CartQuantity": 1,
       "CartCreateAt": "2026-03-04T22:09:07.173Z",
-      "CartUpdate": "2026-03-04T22:09:07.173Z"
+      "CartUpdate": "2026-03-04T22:09:07.173Z",
+      "id": "825d"
     }
   ],
   "Orders": [
@@ -2528,7 +2735,8 @@
       "Status": "Delivered",
       "TotalAmount": 40000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "8b97"
     },
     {
       "OrderId": 7,
@@ -2541,7 +2749,8 @@
       "Status": "Delivered",
       "TotalAmount": 365000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "0750"
     },
     {
       "OrderId": 8,
@@ -2554,7 +2763,8 @@
       "Status": "Confirmed",
       "TotalAmount": 176000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "7905"
     },
     {
       "OrderId": 9,
@@ -2567,7 +2777,8 @@
       "Status": "Pending",
       "TotalAmount": 117000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "237d"
     },
     {
       "OrderId": 10,
@@ -2580,7 +2791,8 @@
       "Status": "Pending",
       "TotalAmount": 25000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "2fb5"
     },
     {
       "OrderId": 11,
@@ -2593,7 +2805,8 @@
       "Status": "Pending",
       "TotalAmount": 200000,
       "VoucherId": null,
-      "DiscountAmount": null
+      "DiscountAmount": null,
+      "id": "de93"
     },
     {
       "OrderId": 12,
@@ -2606,7 +2819,8 @@
       "Status": "Delivered",
       "TotalAmount": 257000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "6429"
     },
     {
       "OrderId": 13,
@@ -2619,7 +2833,8 @@
       "Status": "Pending",
       "TotalAmount": 310000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "1187"
     },
     {
       "OrderId": 14,
@@ -2632,7 +2847,8 @@
       "Status": "Pending",
       "TotalAmount": 244000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "0ad2"
     },
     {
       "OrderId": 15,
@@ -2645,7 +2861,8 @@
       "Status": "Pending",
       "TotalAmount": 420000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "08a6"
     },
     {
       "OrderId": 16,
@@ -2658,7 +2875,8 @@
       "Status": "Confirmed",
       "TotalAmount": 187164,
       "VoucherId": 1,
-      "DiscountAmount": 20796
+      "DiscountAmount": 20796,
+      "id": "be60"
     },
     {
       "OrderId": 17,
@@ -2671,7 +2889,8 @@
       "Status": "Pending",
       "TotalAmount": 263664,
       "VoucherId": 1,
-      "DiscountAmount": 29296
+      "DiscountAmount": 29296,
+      "id": "ec69"
     },
     {
       "OrderId": 18,
@@ -2684,7 +2903,8 @@
       "Status": "Pending",
       "TotalAmount": 251955,
       "VoucherId": 1,
-      "DiscountAmount": 27995
+      "DiscountAmount": 27995,
+      "id": "6a2e"
     },
     {
       "OrderId": 19,
@@ -2697,7 +2917,8 @@
       "Status": "Delivered",
       "TotalAmount": 496000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "e0b5"
     },
     {
       "OrderId": 20,
@@ -2710,7 +2931,8 @@
       "Status": "Pending",
       "TotalAmount": 425000,
       "VoucherId": null,
-      "DiscountAmount": 0
+      "DiscountAmount": 0,
+      "id": "0529"
     }
   ],
   "OrderItems": [
@@ -2718,205 +2940,239 @@
       "OrderId": 6,
       "MedicineId": 2,
       "OrderQuantity": 1,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "4716"
     },
     {
       "OrderId": 7,
       "MedicineId": 3,
       "OrderQuantity": 2,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "03c9"
     },
     {
       "OrderId": 7,
       "MedicineId": 4,
       "OrderQuantity": 5,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "60c2"
     },
     {
       "OrderId": 7,
       "MedicineId": 2,
       "OrderQuantity": 5,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "dbcb"
     },
     {
       "OrderId": 8,
       "MedicineId": 3,
       "OrderQuantity": 2,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "29e5"
     },
     {
       "OrderId": 8,
       "MedicineId": 63,
       "OrderQuantity": 2,
-      "UnitPrice": 44000
+      "UnitPrice": 44000,
+      "id": "b600"
     },
     {
       "OrderId": 8,
       "MedicineId": 62,
       "OrderQuantity": 1,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "24b0"
     },
     {
       "OrderId": 9,
       "MedicineId": 4,
       "OrderQuantity": 1,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "63f1"
     },
     {
       "OrderId": 9,
       "MedicineId": 62,
       "OrderQuantity": 1,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "ab5b"
     },
     {
       "OrderId": 9,
       "MedicineId": 63,
       "OrderQuantity": 1,
-      "UnitPrice": 44000
+      "UnitPrice": 44000,
+      "id": "0b11"
     },
     {
       "OrderId": 10,
       "MedicineId": 4,
       "OrderQuantity": 1,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "01bd"
     },
     {
       "OrderId": 12,
       "MedicineId": 3,
       "OrderQuantity": 1,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "367f"
     },
     {
       "OrderId": 12,
       "MedicineId": 63,
       "OrderQuantity": 1,
-      "UnitPrice": 44000
+      "UnitPrice": 44000,
+      "id": "4ead"
     },
     {
       "OrderId": 12,
       "MedicineId": 62,
       "OrderQuantity": 1,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "db83"
     },
     {
       "OrderId": 12,
       "MedicineId": 2,
       "OrderQuantity": 3,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "e763"
     },
     {
       "OrderId": 12,
       "MedicineId": 4,
       "OrderQuantity": 1,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "f6e5"
     },
     {
       "OrderId": 13,
       "MedicineId": 4,
       "OrderQuantity": 6,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "aebe"
     },
     {
       "OrderId": 13,
       "MedicineId": 2,
       "OrderQuantity": 4,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "2060"
     },
     {
       "OrderId": 14,
       "MedicineId": 3,
       "OrderQuantity": 5,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "bdcd"
     },
     {
       "OrderId": 14,
       "MedicineId": 62,
       "OrderQuantity": 3,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "d548"
     },
     {
       "OrderId": 15,
       "MedicineId": 169,
       "OrderQuantity": 1,
-      "UnitPrice": 420000
+      "UnitPrice": 420000,
+      "id": "17cd"
     },
     {
       "OrderId": 16,
       "MedicineId": 89,
       "OrderQuantity": 4,
-      "UnitPrice": 51990
+      "UnitPrice": 51990,
+      "id": "a0e2"
     },
     {
       "OrderId": 17,
       "MedicineId": 89,
       "OrderQuantity": 4,
-      "UnitPrice": 51990
+      "UnitPrice": 51990,
+      "id": "9af9"
     },
     {
       "OrderId": 17,
       "MedicineId": 110,
       "OrderQuantity": 1,
-      "UnitPrice": 85000
+      "UnitPrice": 85000,
+      "id": "c09d"
     },
     {
       "OrderId": 18,
       "MedicineId": 3,
       "OrderQuantity": 1,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "3eb4"
     },
     {
       "OrderId": 18,
       "MedicineId": 89,
       "OrderQuantity": 5,
-      "UnitPrice": 51990
+      "UnitPrice": 51990,
+      "id": "d510"
     },
     {
       "OrderId": 11,
       "MedicineId": 2,
       "OrderQuantity": 1,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "677c"
     },
     {
       "OrderId": 11,
       "MedicineId": 3,
       "OrderQuantity": 1,
-      "UnitPrice": 20000
+      "UnitPrice": 20000,
+      "id": "7e49"
     },
     {
       "OrderId": 11,
       "MedicineId": 63,
       "OrderQuantity": 1,
-      "UnitPrice": 44000
+      "UnitPrice": 44000,
+      "id": "b58d"
     },
     {
       "OrderId": 11,
       "MedicineId": 62,
       "OrderQuantity": 2,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "a043"
     },
     {
       "OrderId": 19,
       "MedicineId": 2,
       "OrderQuantity": 10,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "9671"
     },
     {
       "OrderId": 19,
       "MedicineId": 62,
       "OrderQuantity": 2,
-      "UnitPrice": 48000
+      "UnitPrice": 48000,
+      "id": "6baf"
     },
     {
       "OrderId": 20,
       "MedicineId": 4,
       "OrderQuantity": 1,
-      "UnitPrice": 25000
+      "UnitPrice": 25000,
+      "id": "898e"
     },
     {
       "OrderId": 20,
       "MedicineId": 2,
       "OrderQuantity": 10,
-      "UnitPrice": 40000
+      "UnitPrice": 40000,
+      "id": "716d"
     }
   ],
   "Reviews": [
@@ -2929,7 +3185,8 @@
       "ReviewCreatedAt": "2026-03-01T15:02:11.080Z",
       "ReplyContent": null,
       "ReplyBy": null,
-      "ReplyCreatedAt": null
+      "ReplyCreatedAt": null,
+      "id": "a4a0"
     },
     {
       "ReviewId": 2,
@@ -2940,7 +3197,8 @@
       "ReviewCreatedAt": "2026-03-01T15:17:37.050Z",
       "ReplyContent": null,
       "ReplyBy": null,
-      "ReplyCreatedAt": null
+      "ReplyCreatedAt": null,
+      "id": "fb5e"
     }
   ],
   "Supplier": [
@@ -2948,49 +3206,57 @@
       "SupplierId": 1,
       "SupplierName": "Công ty Dược phẩm Hà Nội",
       "SupplierAddress": "123 Giải Phóng, Hoàng Mai, Hà Nội",
-      "ContactInfo": "SĐT: 024-3869-1234 | Email: contact@duochanoi.vn"
+      "ContactInfo": "SĐT: 024-3869-1234 | Email: contact@duochanoi.vn",
+      "id": "066e"
     },
     {
       "SupplierId": 2,
       "SupplierName": "Công ty CP Dược Sài Gòn",
       "SupplierAddress": "45 Nguyễn Thị Minh Khai, Q.3, TP.HCM",
-      "ContactInfo": "SĐT: 028-3930-5678 | Email: info@duocsaigon.vn"
+      "ContactInfo": "SĐT: 028-3930-5678 | Email: info@duocsaigon.vn",
+      "id": "6299"
     },
     {
       "SupplierId": 3,
       "SupplierName": "Công ty Dược phẩm Trung Ương 1",
       "SupplierAddress": "28 Lê Văn Hiến, Đống Đa, Hà Nội",
-      "ContactInfo": "SĐT: 024-3823-4567 | Email: duoctu1@moh.gov.vn"
+      "ContactInfo": "SĐT: 024-3823-4567 | Email: duoctu1@moh.gov.vn",
+      "id": "1422"
     },
     {
       "SupplierId": 4,
       "SupplierName": "Công ty CP Pymepharco",
       "SupplierAddress": "166-170 Nguyễn Huệ, TP. Tuy Hòa, Phú Yên",
-      "ContactInfo": "SĐT: 0257-3823-700 | Email: info@pymepharco.com"
+      "ContactInfo": "SĐT: 0257-3823-700 | Email: info@pymepharco.com",
+      "id": "cb65"
     },
     {
       "SupplierId": 5,
       "SupplierName": "Công ty Dược phẩm Imexpharm",
       "SupplierAddress": "04 Nguyễn Thái Học, P.1, Sa Đéc, Đồng Tháp",
-      "ContactInfo": "SĐT: 0277-3861-069 | Email: info@imexpharm.com"
+      "ContactInfo": "SĐT: 0277-3861-069 | Email: info@imexpharm.com",
+      "id": "7716"
     },
     {
       "SupplierId": 6,
       "SupplierName": "Công ty CP Dược phẩm OPC",
       "SupplierAddress": "1000 Võ Văn Kiệt, P.6, Q.5, TP.HCM",
-      "ContactInfo": "SĐT: 028-3833-0502 | Email: info@opcpharma.com"
+      "ContactInfo": "SĐT: 028-3833-0502 | Email: info@opcpharma.com",
+      "id": "980c"
     },
     {
       "SupplierId": 7,
       "SupplierName": "Công ty Dược phẩm Domesco",
       "SupplierAddress": "66 Quốc lộ 30, Mỹ Phú, Sa Đéc, Đồng Tháp",
-      "ContactInfo": "SĐT: 0277-3861-333 | Email: info@domesco.com.vn"
+      "ContactInfo": "SĐT: 0277-3861-333 | Email: info@domesco.com.vn",
+      "id": "b708"
     },
     {
       "SupplierId": 8,
       "SupplierName": "Công ty CP Dược phẩm Mediplantex",
       "SupplierAddress": "358 Đường Giải Phóng, Thanh Xuân, Hà Nội",
-      "ContactInfo": "SĐT: 024-3864-4562 | Email: mediplantex@mediplantex.vn"
+      "ContactInfo": "SĐT: 024-3864-4562 | Email: mediplantex@mediplantex.vn",
+      "id": "57f6"
     }
   ],
   "Import": [
@@ -3001,7 +3267,8 @@
       "ImportCreateAt": "2026-02-25T00:00:00.000Z",
       "TotalPrice": 2715104,
       "ImportStatus": "Đang chờ",
-      "Status": "Pending"
+      "Status": "Pending",
+      "id": "321a"
     },
     {
       "ImportId": 2,
@@ -3010,7 +3277,8 @@
       "ImportCreateAt": "2026-02-26T00:00:00.000Z",
       "TotalPrice": 256641,
       "ImportStatus": "Đang chờ",
-      "Status": "Pending"
+      "Status": "Pending",
+      "id": "26fc"
     },
     {
       "ImportId": 3,
@@ -3019,7 +3287,8 @@
       "ImportCreateAt": "2026-02-26T00:00:00.000Z",
       "TotalPrice": 134532,
       "ImportStatus": "Đang chờ",
-      "Status": "Pending"
+      "Status": "Pending",
+      "id": "35db"
     },
     {
       "ImportId": 4,
@@ -3028,7 +3297,8 @@
       "ImportCreateAt": "2026-02-26T00:00:00.000Z",
       "TotalPrice": 134532,
       "ImportStatus": "Đang chờ",
-      "Status": "Pending"
+      "Status": "Pending",
+      "id": "43a8"
     },
     {
       "ImportId": 5,
@@ -3037,7 +3307,46 @@
       "ImportCreateAt": "2026-02-26T00:00:00.000Z",
       "TotalPrice": 1599963,
       "ImportStatus": "Đang chờ",
-      "Status": "Pending"
+      "Status": "Pending",
+      "id": "4c35"
+    },
+    {
+      "id": "991f",
+      "SupplierId": 1,
+      "StaffId": 1,
+      "ImportCreateAt": "2026-03-06",
+      "TotalPrice": 300000,
+      "Status": "Hoàn thành"
+    },
+    {
+      "id": "deab",
+      "ImportId": 6,
+      "SupplierId": 1,
+      "StaffId": 1,
+      "ImportCreateAt": "2026-03-06",
+      "TotalPrice": 50000,
+      "ImportStatus": "Hoàn thành",
+      "Status": "Hoàn thành"
+    },
+    {
+      "id": "ef98",
+      "ImportId": 7,
+      "SupplierId": 1,
+      "StaffId": 1,
+      "ImportCreateAt": "2026-03-06",
+      "TotalPrice": 50000,
+      "ImportStatus": "Hoàn thành",
+      "Status": "Hoàn thành"
+    },
+    {
+      "id": "7573",
+      "ImportId": 8,
+      "SupplierId": 1,
+      "StaffId": 1,
+      "ImportCreateAt": "2026-03-06",
+      "TotalPrice": 50000,
+      "ImportStatus": "Hoàn thành",
+      "Status": "Hoàn thành"
     }
   ],
   "ImportDetail": [
@@ -3046,49 +3355,94 @@
       "ImportId": 1,
       "MedicineId": 3,
       "ImportQuantity": 12,
-      "UnitPrice": 12121
+      "UnitPrice": 12121,
+      "id": "f870"
     },
     {
       "ImportDetailId": 2,
       "ImportId": 1,
       "MedicineId": 6,
       "ImportQuantity": 212,
-      "UnitPrice": 12121
+      "UnitPrice": 12121,
+      "id": "4410"
     },
     {
       "ImportDetailId": 3,
       "ImportId": 2,
       "MedicineId": 8,
       "ImportQuantity": 121,
-      "UnitPrice": 2121
+      "UnitPrice": 2121,
+      "id": "2888"
     },
     {
       "ImportDetailId": 4,
       "ImportId": 3,
       "MedicineId": 7,
       "ImportQuantity": 111,
-      "UnitPrice": 1212
+      "UnitPrice": 1212,
+      "id": "114f"
     },
     {
       "ImportDetailId": 5,
       "ImportId": 4,
       "MedicineId": 7,
       "ImportQuantity": 111,
-      "UnitPrice": 1212
+      "UnitPrice": 1212,
+      "id": "21a0"
     },
     {
       "ImportDetailId": 6,
       "ImportId": 5,
       "MedicineId": 2,
       "ImportQuantity": 1212,
-      "UnitPrice": 111
+      "UnitPrice": 111,
+      "id": "2701"
     },
     {
       "ImportDetailId": 7,
       "ImportId": 5,
       "MedicineId": 12,
       "ImportQuantity": 121,
-      "UnitPrice": 12111
+      "UnitPrice": 12111,
+      "id": "66f6"
+    },
+    {
+      "id": "e61b",
+      "ImportId": "991f",
+      "MedicineId": 1,
+      "ImportQuantity": 3,
+      "UnitPrice": 50000
+    },
+    {
+      "id": "b927",
+      "ImportId": "991f",
+      "MedicineId": 3,
+      "ImportQuantity": 3,
+      "UnitPrice": 50000
+    },
+    {
+      "id": "f07f",
+      "ImportDetailId": 8,
+      "ImportId": 6,
+      "MedicineId": 1,
+      "ImportQuantity": 1,
+      "UnitPrice": 50000
+    },
+    {
+      "id": "a069",
+      "ImportDetailId": 9,
+      "ImportId": 7,
+      "MedicineId": 1,
+      "ImportQuantity": 1,
+      "UnitPrice": 50000
+    },
+    {
+      "id": "d330",
+      "ImportDetailId": 10,
+      "ImportId": 8,
+      "MedicineId": 1,
+      "ImportQuantity": 1,
+      "UnitPrice": 50000
     }
   ],
   "Conditions": [],
@@ -3109,7 +3463,8 @@
       "Quantity": 100,
       "UsedQuantity": 3,
       "IsActive": true,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "e155"
     },
     {
       "VoucherId": 2,
@@ -3124,7 +3479,8 @@
       "Quantity": 50,
       "UsedQuantity": 0,
       "IsActive": true,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "36a1"
     },
     {
       "VoucherId": 3,
@@ -3139,7 +3495,8 @@
       "Quantity": 10,
       "UsedQuantity": 0,
       "IsActive": true,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "2089"
     },
     {
       "VoucherId": 4,
@@ -3154,7 +3511,8 @@
       "Quantity": 100,
       "UsedQuantity": 10,
       "IsActive": true,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "b66b"
     },
     {
       "VoucherId": 5,
@@ -3169,7 +3527,8 @@
       "Quantity": 50,
       "UsedQuantity": 50,
       "IsActive": false,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "35cd"
     },
     {
       "VoucherId": 6,
@@ -3184,7 +3543,8 @@
       "Quantity": 100,
       "UsedQuantity": 0,
       "IsActive": false,
-      "CreatedAt": "2026-03-03T20:21:52.000Z"
+      "CreatedAt": "2026-03-03T20:21:52.000Z",
+      "id": "19f7"
     },
     {
       "VoucherId": 7,
@@ -3199,7 +3559,9 @@
       "Quantity": 10,
       "UsedQuantity": 0,
       "IsActive": true,
-      "CreatedAt": "2026-03-04T22:26:01.000Z"
+      "CreatedAt": "2026-03-04T22:26:01.000Z",
+      "id": "e2e1"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
