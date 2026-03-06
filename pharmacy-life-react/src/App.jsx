@@ -8,7 +8,8 @@ import UserProfile from './pages/Profile/UserProfile';
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import HomePage from "./pages/Dashboard/HomePage";
-
+import CategoryList from './pages/Dashboard/CategoryList';
+import CategoryCreate from './pages/Dashboard/CategoryCreate';
 function App() {
   const [cartCount, setCartCount] = useState(0);
 
@@ -59,6 +60,8 @@ function App() {
             <Route path="/dashboard/import/list" element={<ImportList />} />
             <Route path="/dashboard/import/create" element={<ImportCreate />} />
             <Route path="/profile" element={<UserProfile />} />
+            <Route path="/category-list" element={<CategoryList />} />
+            <Route path="/category-create" element={<CategoryCreate />} />
           </Routes>
         </main>
 
