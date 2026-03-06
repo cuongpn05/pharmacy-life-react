@@ -24,9 +24,10 @@ export const getMedicines = async ({ limit, categoryId } = {}) => {
 };
 
 export const getMedicineById = async (id) => {
-  const res = await fetch(`${API_BASE_URL}/Medicine/${id}`);
+  const res = await fetch(`${API_BASE_URL}/Medicine?MedicineId=${id}`);
   if (!res.ok) throw new Error("Failed to fetch medicine");
-  return res.json();
+  const data = await res.json();
+  return data.length > 0 ? data[0] : null;
 };
 
 // ─── Customer ─────────────────────────────────────────────────────────────────
